@@ -3,77 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Search Box (No JS)</title>
+    <title>Horizontal Scrollable Menu</title>
     <style>
+        /* Basic page styling */
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 20px;
             background-color: #f9f9f9;
-            flex-direction: column;
         }
 
-        /* Hide the checkbox */
-        #toggleSearch {
-            display: none;
-        }
-
-        .search-box {
-            position: relative;
-            width: 300px;
-            display: none;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 10px 40px 10px 10px;
+        /* Scrollable menu container */
+        .menu {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            white-space: nowrap;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            scroll-snap-type: x mandatory; /* Optional: Snap items while scrolling */
             border: 2px solid #ccc;
-            border-radius: 25px;
-            outline: none;
-            font-size: 16px;
+            border-radius: 10px;
+            background-color: #fff;
         }
 
-        .search-box .icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #666;
-            font-size: 20px;
-            pointer-events: none;
-        }
-
-        .toggle-btn {
+        /* Style for menu items */
+        .menu-item {
+            flex: 0 0 auto;
             padding: 10px 20px;
-            font-size: 16px;
-            border: none;
+            border: 2px solid #007bff;
             border-radius: 5px;
             background-color: #007bff;
             color: #fff;
+            text-align: center;
             cursor: pointer;
+            scroll-snap-align: start; /* Snap items to start */
         }
 
-        .toggle-btn:hover {
-            background-color: #0056b3;
+        /* Hide scrollbar (optional) */
+        .menu::-webkit-scrollbar {
+            height: 8px;
         }
 
-        /* Show search box when checkbox is checked */
-        #toggleSearch:checked + .search-box {
-            display: block;
+        .menu::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
 
-<label for="toggleSearch" class="toggle-btn">Toggle Search</label>
-<input type="checkbox" id="toggleSearch">
+<h2>Horizontal Scrollable Menu</h2>
 
-<div class="search-box">
-    <input type="text" placeholder="Search...">
-    <span class="icon">🔍</span>
+<div class="menu">
+    <div class="menu-item">Home</div>
+    <div class="menu-item">About</div>
+    <div class="menu-item">Services</div>
+    <div class="menu-item">Portfolio</div>
+    <div class="menu-item">Blog</div>
+    <div class="menu-item">Contact</div>
+    <div class="menu-item">FAQ</div>
+    <div class="menu-item">Pricing</div>
+    <div class="menu-item">Support</div>
 </div>
 
 </body>

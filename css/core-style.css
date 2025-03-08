@@ -256,7 +256,11 @@ img {
 .line-mtb15 {
     margin: 15px 0;
 }
-
+.square-300{
+    height: 300px;
+    width:300px;
+    flex: 0 0  auto;
+}
 .height-500 {
     height: 500px !important;
 }
@@ -554,8 +558,8 @@ img {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
     position: relative;
     z-index: 1;
     font-size: 14px;
