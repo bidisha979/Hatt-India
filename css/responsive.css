@@ -1,7 +1,15 @@
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) {
     .welcome_slide_text > h2,
     .single_catagory_area h2 {
         font-size: 70px;
+    }
+    .userbuttons {
+        float: right;
+        position: relative;
+        order:2;
+    }
+    .catagories{
+        order:1;
     }
 }
 
