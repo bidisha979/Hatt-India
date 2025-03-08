@@ -60,7 +60,7 @@
     margin: auto;
     border: 2px solid #8b0000;
 
-
+    display: block;
 }
 
 .search-box input {
@@ -83,3 +83,12 @@
     font-size: 20px;
     pointer-events: none;
 }
+
+#toggleSearch {
+    display: none;
+}
+
+#toggleSearch:checked + .search-box {
+    display: block;
+}
+
