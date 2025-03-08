@@ -42,6 +42,7 @@
 }
 .userbuttons{
     float: right;
+    cursor: pointer;
 
 }
 .navbar{
@@ -83,12 +84,3 @@
     font-size: 20px;
     pointer-events: none;
 }
-
-#toggleSearch {
-    display: none;
-}
-
-#toggleSearch:checked + .search-box {
-    display: block;
-}
-
