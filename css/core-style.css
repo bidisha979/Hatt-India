@@ -50,7 +50,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display';
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -63,7 +63,7 @@ h5,
 h6 {
     color: #3a3a3a;
     line-height: 1.2;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display';
     font-weight: 700;
 }
 
@@ -71,7 +71,7 @@ p {
     color: #3a3a3a;
     font-size: 1em;
     line-height: 1.5;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display';
     font-weight: 400;
 }
 
@@ -87,7 +87,7 @@ a:focus {
     text-decoration: none;
     outline: none;
     color: #000000;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display';
     font-weight: 400;
 }
 
@@ -642,7 +642,7 @@ img {
 
 .menu-content ul :not(collapsed) .arrow:before,
 .menu-content li :not(collapsed) .arrow:before {
-    font-family: FontAwesome;
+    font-family: 'Playfair Display';
     content: "\f078";
     display: inline-block;
     padding-left: 10px;
@@ -1325,13 +1325,45 @@ img {
 ---------------------- */
 
 .footer_area {
-    background-color: #fff;
-    border-top: 2px solid #e5e5e5;
+    background-color: #f5ebd7;
+    /* border-top: 2px solid #e5e5e5; */
     padding: 100px 0 50px;
 }
 
 .footer_content > p {
     font-size: 14px;
+}
+
+#footer-title{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.row{
+    justify-content: space-between;
+}
+
+.contact{
+    /* padding-bottom: 50px; */
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.art-info{
+    padding: 20px 50px;
+    background:rgb(255, 209, 192);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+.art-info .value{
+    font-size: 25px;
 }
 
 .footer_content > p:first-child {
@@ -1357,7 +1389,7 @@ img {
     text-transform: capitalize;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .footer_widget_menu a:hover {
