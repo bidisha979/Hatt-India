@@ -257,7 +257,7 @@ img {
     margin: 15px 0;
 }
 .square-300{
-    height: 300px;
+    height: 100%;
     width:300px;
     flex: 0 0  auto;
 }
@@ -558,8 +558,8 @@ img {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     position: relative;
     z-index: 1;
     font-size: 14px;
@@ -619,7 +619,7 @@ img {
     right: 0;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
-    background-color: #3a3a3a;
+    background-color: #8b0000;
 }
 
 #sideMenuClose:hover {
@@ -633,15 +633,20 @@ img {
 .menu-list h6 {
     padding: 30px 15px;
     margin-bottom: 0;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 2px solid #8b0000;
+    text-align: center;
 }
 
 .menu-content ul,
 .menu-content li {
     list-style: none;
-    padding: 0;
-    margin: 0;
     cursor: pointer;
+    font-family: 'Playfair Display';
+}
+
+.menu-content li :hover{
+    background: #8b0000;
+    color: #f5ebd7;
 }
 
 .menu-content ul :not(collapsed) .arrow:before,
@@ -719,6 +724,7 @@ img {
     position: absolute;
     top: 18px;
     left: 0;
+    display: none;
 }
 
 .menu-content > li.collapsed > a:before {
