@@ -1,19 +1,12 @@
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1350px) {
     .welcome_slide_text > h2,
     .single_catagory_area h2 {
         font-size: 70px;
     }
-    .userbuttons {
-        float: right;
-        position: relative;
-        order:2;
-    }
-    .catagories{
-        order:1;
-    }
+    
+   
 }
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
     .navbar-toggler {
         padding: 0;
         font-size: 20px;
@@ -31,12 +24,14 @@
         background-color: #f4f2f8;
     }
     .single_footer_area {
-        margin-bottom: 100px;
+        width: 100%;
     }
     .welcome_slide_text > h2,
     .single_catagory_area h2 {
         font-size: 50px;
     }
+
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -84,7 +79,12 @@
         margin-bottom: 30px;
     }
     .single_footer_area {
-        margin-bottom: 100px;
+        /* margin-bottom: 100px; */
+        /* margin-left: 20px; */
+
+        width: 100%;
+
+
     }
     .footer_social_area > a {
         font-size: 18px;
