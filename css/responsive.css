@@ -61,7 +61,7 @@
         padding: 30px 0;
     }
     .navbar-toggler {
-        /* position: absolute; */
+        position: fixed;
         /* display: none; */
         padding: 0;
         font-size: 20px;
@@ -82,7 +82,7 @@
         background-color: #f5ebd7;
         color: #8b0000;
         z-index: 99;
-        margin-top: 10px;
+        margin-top: 65px;
 
     }
     .menufirstlist{
