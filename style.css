@@ -32,8 +32,11 @@
 
 .logo{
     height: 100px;
-    width: 100px;
     margin-top: 0px;
+    padding: 0;
+    top:0;
+  
+    /* margin-top: 200px; */
     /* margin-bottom: 10px; */
 }
 .searchform{
@@ -45,9 +48,9 @@
     cursor: pointer;
 
 }
-.navbar{
+/* .navbar{
     flex-direction: row;
-}
+} */
 .usericon{
     margin: 0 15px;
     font-size: 25px;
@@ -82,13 +85,76 @@
 }
 .mobilesearch{
     /* display: none; */
-    visibility: hidden;
+    /* visibility: hidden; */
 
 }
 
 #mobilesearchbox{
     display: none;
 }
+
+
+
+
+/* navbar start */
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+/* Center logo for mobile */
+.navbar-brand {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* User buttons */
+.user-buttons {
+    display: flex;
+    /* position: absolute; */
+    /* transform: translateX(200%); */
+    /* float: right; */
+
+    gap: 10px;
+}
+
+
+/* Navbar adjustments for large screens */
+@media (min-width: 992px) {
+    .navbar {
+        flex-wrap: nowrap;
+    }
+
+    .navbar-brand {
+        position: static;
+        transform: none;
+        margin-right: auto;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .user-buttons {
+
+        margin-left: auto;
+    }
+    
+}
+
+
+/* navbar end */
 
 
 /* tradition and essence start*/
@@ -248,7 +314,31 @@
 
 /* catagories start */
 .catagories{
- color:#8b0000;   
+ /* color:#f5ebd7; */
+ color: #8b0000;
+ list-style: none;
+
+
+}
+.nav-link.dropdown-toggle::before {
+    /* display: none; */
+    /* color: #8b0000; */
+}
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
+.catagories :hover{
+    background-color:#f5ebd7;   
+    color:#f5ebd7 ;
+    border-radius: 5px;
+}
+.catagories a{
+    color:#8b0000;   
+    text-decoration: none;
+}
+.catagories a :hover{
+    color:#f5ebd7 ;
+    background-color: #8b0000;
 }
 
 .menu {
@@ -315,7 +405,7 @@
         display: none;
     }
     #mobilesearchbox{
-        display: block;
+        /* display: block; */
     }
     .menu-btn {
         display: block;
@@ -331,6 +421,14 @@
     
     .menu-toggle:checked + .menu {
         display: flex;
+    }
+    .logo{
+        margin-top: 0px;
+        padding: 0;
+        top:0;
+    }
+    nav{
+        height: 100px;
     }
 }
 /* catagories end */
@@ -654,3 +752,43 @@ margin-bottom: 20px;
     color: black;
 }
 /* quality section end */
+/* banner area */
+.banner img{
+    height: 500px;
+    width: 100%;
+}
+/* Style for the carousel arrows */
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 5%; /* Control the width of the arrow area */
+    opacity: 1; /* Make arrows fully visible */
+}
+
+/* Style the arrow icons */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-color: #8b0000; /* Change color on hover */
+
+    border-radius: 50%; /* Make it circular */
+    width: 50px; /* Size of the icon */
+    height: 50px;
+    background-size: 60%; /* Resize the icon */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hover effect */
+.carousel-control-prev:hover .carousel-control-prev-icon, 
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: black; /* Black background for the arrow */
+
+}
+
+/* Position the arrows */
+.carousel-control-prev {
+    left: 10px; /* Distance from the left */
+}
+
+.carousel-control-next {
+    right: 10px; /* Distance from the right */
+}
