@@ -293,11 +293,11 @@ img {
 }
 
 .section_padding_100 {
-    padding: 100px 0;
+    /* padding: 100px 0; */
 }
 
 .section_padding_100_0 {
-    padding: 75px 0 0;
+    padding: 30px 0 0;
 }
 
 .section_padding_0_100 {
@@ -1044,12 +1044,12 @@ img {
 ---------------------------- */
 
 .portfolio-menu > .btn {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 700;
     color: #9f9f9f;
     background-color: transparent;
     padding: 0 15px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .portfolio-menu > .btn:focus,
@@ -1125,9 +1125,9 @@ img {
     color: rgba(255, 255, 255, 1);
 }
 
-.product-description {
+/* .product-description {
     margin-top: 20px;
-}
+} */
 
 .product-description h4 {
     font-weight: 400;
