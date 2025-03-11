@@ -485,6 +485,11 @@ margin-bottom: 20px;
 .art-text h1, p,a,sub{
     font-style: 'Playfair Display';
 }
+.art-text a{
+    color: #8b0000;
+    margin-top: 5px;
+}
+
 
 .single_catagory_area {
     
@@ -554,6 +559,7 @@ margin-bottom: 20px;
     border-radius: 10px;
     /* display: none; */
 }
+
 
 /* art and artisan end */
 
@@ -784,13 +790,21 @@ margin-bottom: 20px;
     background: none;
     width: 90px;
     /* overflow:; */
-    word-wrap: break-word;        /* Break long words */
+    word-wrap: nowrap;    
     white-space: normal;          /* Allow text to wrap */
-    overflow-wrap: break-word;    
+    overflow-wrap: nowrap; 
+    /* padding-left: 10px; */
+}
+.service_quality_container{
+    /* margin-left: 200px; */
+    /* display: none; */
+    /* justify-content: space-between; */
+    margin: auto;
 }
 .quality p{
     font-size: 20px;
     color: black;
+    /* margin-left: ; */
 }
 /* quality section end */
 /* banner area */
