@@ -237,11 +237,12 @@
 }
 
 .slideshow-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-x: scroll; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
     padding-bottom: 10px;
     scroll-snap-type: x mandatory; /* Snap scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    padding-left: 20px; /* Smooth scrolling on iOS */
 }
 
 .slideshow {
@@ -266,7 +267,7 @@
 }
 
 .slide-item1 {
-    /* flex: 0 0 calc(25% - 20px); 4 items per screen */
+    flex: 0 0 calc(25% - 20px); 
     box-sizing: border-box;
     /* padding: 20px; */
     /* border: 2px solid #ccc; */
@@ -281,6 +282,11 @@
     height: auto;
     /* border-radius: 10px; */
 }
+.slide-item1 img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 10px; */
+}
 
 
 
@@ -288,6 +294,19 @@
 @media (max-width: 768px) {
     .slide-item {
         flex: 0 0 calc(60% - 20px); /* 3 items per screen */
+    }
+    .slide-item1 {
+        /* flex: 0 0 calc(60% - 20px); 3 items per screen */
+    }
+    .producttimeless{
+        /* flex: 0 0 calc(50% - 20px); */
+        box-sizing: border-box;
+        /* height: 100px; */
+        /* width: 100px; */
+        /* gap:0px;
+        padding: 0px; */
+        width: auto;
+        margin: 0px;
     }
     .handpicked-item{
         padding: 0;
@@ -486,8 +505,16 @@ margin-bottom: 20px;
     font-style: 'Playfair Display';
 }
 .art-text a{
+    /* float: left; */
+    /* left: 0; */
     color: #8b0000;
     margin-top: 5px;
+}
+.art_lastbuttons{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 5px;
 }
 
 
@@ -724,16 +751,7 @@ margin-bottom: 20px;
         width: 250px;
 
     }
-    .producttimeless{
-        flex: 0 0 calc(25% - 300px);
-        box-sizing: border-box;
-        /* height: 100px; */
-        /* width: 100px; */
-        /* gap:0px;
-        padding: 0px; */
-        width: 300px;
-        margin: 0px;
-    }
+   
 }
 
 #props-text{
@@ -851,9 +869,7 @@ margin-bottom: 20px;
 
 /* csutomer review start */
 /* For larger screens (laptop and above) */
-.mobilereview{
-    display: none;
-}
+
 .review_content {
     display: flex;
     flex-direction: row;
@@ -887,13 +903,10 @@ margin-bottom: 20px;
     .card-body {
         order: 2; /* Text below the image */
     }
-    .mobilereview{
-        display: block;
-    }
-
-    .laptopreview{
-        display: none;
-    }
 }
 
 /* customer review end */
+
+
+/* scrollbar initial margin shown */
+
