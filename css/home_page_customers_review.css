@@ -1,0 +1,126 @@
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* Card styles */
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* background-color: #fff; */
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    /* border-radius: 10px; */
+    padding: 30px;
+
+    /* margin: 30px;; */
+}
+
+/* Text section */
+.card-text {
+    flex: 1;
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    justify-content: center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.card-text h3 {
+    font-size: 25px;
+    /* margin-bottom: 10px; */
+}
+.reviewtext{
+    margin-top: 25px;
+    max-height: 300px;;
+    overflow: auto;
+    width: 100%;
+}
+.reviewtext::-webkit-scrollbar{
+    display: none;;
+}
+.reviewproductname{
+    color: #8b0000;
+}
+
+.card-text p {
+    margin-bottom: 20px;
+}
+
+
+/* Image section */
+.card-image {
+    /* flex: 1; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.reviewlastoptions {
+    display: flex;
+    justify-content: space-between; /* Even space between spans */
+    width: 100%;                   /* Full width */
+}
+
+.reviewlastoptions span {
+    flex: 1;                       /* Each span takes equal width */
+    text-align: center;            /* Center text inside the span */
+    padding: 10px;                 /* Add some padding */
+    box-sizing: border-box;        /* Include padding in width */
+    /* border: 1px solid #ccc;        Optional: Add border to see layout */
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* For mobile: 1 card per row */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    
+    .card-image img{
+        width: 60%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .card {
+        border-bottom: 2px solid #8b0000; /* Horizontal line between rows */
+    }
+ 
+    /* Remove bottom border from the last row */
+    .card:nth-last-child(0) {
+        /* border-bottom: none; */
+        border-top: 2px solid #8b0000; /* Horizontal line between rows */
+
+    }
+
+    
+}
+/* For laptop screens: Add horizontal and vertical lines */
+@media (min-width: 769px) {
+    .card-container {
+        grid-gap: 0; /* Remove grid gap */
+    }
+
+    .card {
+        border-bottom: 2px solid #8b0000; /* Horizontal line between rows */
+        border-right: 2px solid #8b0000; /* Vertical line between columns */
+    }
+
+    /* Remove right border from the last card in each row */
+    .card:nth-child(2n) {
+        border-right: none;
+    }
+
+    /* Remove bottom border from the last row */
+    .card:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+}

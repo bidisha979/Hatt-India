@@ -3,101 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Responsive Image Slider (No JS)</title>
     <style>
-        /* Basic navbar styling */
-        .navbar {
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
-            padding: 0.5rem 1rem;
+            height: 100vh;
+            background: #f0f0f0;
         }
 
-        /* Center logo for mobile */
-        .navbar-brand {
-            margin: 0 auto;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+        .slider-container {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
         }
 
-        /* User buttons */
-        .user-buttons {
+        .slider-wrapper {
             display: flex;
-            gap: 10px;
+            overflow: hidden;
         }
 
-        /* Navbar adjustments for large screens */
-        @media (min-width: 992px) {
-            .navbar {
-                flex-wrap: nowrap;
-            }
+        .slide {
+            flex: 0 0 100%;
+            transition: transform 0.5s ease;
+        }
 
-            .navbar-brand {
-                position: static;
-                transform: none;
-                margin-right: auto;
-            }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
 
-            .navbar-collapse {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-            }
+        /* Navigation buttons */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
 
-            .user-buttons {
-                margin-left: auto;
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Checkbox trick for navigation */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Slide navigation */
+        #slide1:checked ~ .slider-wrapper {
+            transform: translateX(0%);
+        }
+
+        #slide2:checked ~ .slider-wrapper {
+            transform: translateX(-100%);
+        }
+
+        #slide3:checked ~ .slider-wrapper {
+            transform: translateX(-200%);
+        }
+
+        #slide4:checked ~ .slider-wrapper {
+            transform: translateX(-300%);
+        }
+
+        /* Responsive layout */
+        @media (min-width: 768px) {
+            .slide {
+                flex: 0 0 25%; /* 4 images for laptop */
             }
         }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Logo -->
-    <a class="navbar-brand" href="#">Navbar</a>
+<div class="slider-container">
+    <!-- Radio buttons for navigation -->
+    <input type="radio" id="slide1" name="slider" checked>
+    <input type="radio" id="slide2" name="slider">
+    <input type="radio" id="slide3" name="slider">
+    <input type="radio" id="slide4" name="slider">
 
-    <!-- Hamburger menu for mobile -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Collapsible menu items -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
+    <!-- Slider images -->
+    <div class="slider-wrapper">
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF5733" alt="Image 1"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/33FF57" alt="Image 2"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/5733FF" alt="Image 3"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
     </div>
 
-        <!-- User buttons always on the right -->
-        <div class="user-buttons">
-            <button class="btn btn-outline-primary">Login</button>
-            <button class="btn btn-outline-success">Signup</button>
-        </div>
-</nav>
-
-<!-- Bootstrap JS (for toggler functionality) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Navigation buttons -->
+    <label for="slide1" class="nav-btn prev">❮</label>
+    <label for="slide2" class="nav-btn next">❯</label>
+    <label for="slide3" class="nav-btn next">❯</label>
+    <label for="slide4" class="nav-btn next">❯</label>
+</div>
 
 </body>
 </html>

@@ -16,6 +16,8 @@
 
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="css/home_page_customers_review.css">
+    <link rel="stylesheet" href="css/home_page_shop_by_categories.css">
     <link rel="stylesheet" href="style.css">
 
     <!-- Responsive CSS -->
@@ -275,6 +277,8 @@
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div> -->
                 </li>
+
+       
             </ul>
         </div>
     
@@ -608,7 +612,7 @@
             </div>
 
 
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="section_heading text-center">
@@ -616,7 +620,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <h2 class="heading_section">The Timeless Tradition</h2>
 
 
 
@@ -743,6 +748,11 @@
             </div>
 
 
+
+
+
+           
+
         </section>
         <!-- ****** The Timeless Tradition End ****** -->
 
@@ -755,23 +765,26 @@
 
 
         <div class="shopbycategories secondary_bg">
-            <div class="newheading section_heading text-center">
-                <h2 style="padding-top: 30px;">Shop By Categories</h2>
-            </div>
+            <!-- <div class="newheading section_heading text-center">
+                <h2 style="padding-top: 30px;"></h2>
+
+            </div> -->
 
             <div class="carousel-wrapper">
+            <h2 class="heading_section">Shop By Categories</h2>
+
                 <button class="arrow left-arrow" onclick="scrollCarousel(-1)">&#10094;</button> <!-- Left Arrow -->
-                <div class="carousel-container " id="carousel">
-                    <div class="product-card">
+                <div class="carousel-container  mx-5" id="carousel">
+                    <div class="product-card shopbycatagories_count">
                         <div class="product-img">
-                            <img src="img/product-img/Lotus Potli bag by potliekhas bridal potli.jpg" alt="Product 1">
+                            <img src="img/product-img/product-2.jpg" alt="Product 1">
                             <div class="product-quicview"><i class="ti-plus"></i></div>
                         </div>
                         <div class="category-description">
                             <a href="#">Saree</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card shopbycatagories_count">
                         <div class="product-img">
                             <img src="img/product-img/product-1.jpg" alt="Product 1">
                             <div class="product-quicview"><i class="ti-plus"></i></div>
@@ -780,27 +793,28 @@
                             <a href="#">Saree</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card shopbycatagories_count">
                         <div class="product-img">
-                            <img src="img/product-img/product-1.jpg" alt="Product 1">
+                            <img src="img/product-img/footwear.jpg" alt="Product 1">
                             <div class="product-quicview"><i class="ti-plus"></i></div>
                         </div>
                         <div class="category-description">
                             <a href="#">Saree</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                  
+                    <div class="product-card shopbycatagories_count">
                         <div class="product-img">
-                            <img src="img/product-img/product-1.jpg" alt="Product 1">
+                            <img src="img/product-img/Bengali Grooms.jpg" alt="Product 1">
                             <div class="product-quicview"><i class="ti-plus"></i></div>
                         </div>
                         <div class="category-description">
                             <a href="#">Saree</a>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card shopbycatagories_count">
                         <div class="product-img">
-                            <img src="img/product-img/product-1.jpg" alt="Product 1">
+                            <img src="img/product-img/70's Magenta Embroidered Mule.jpg" alt="Product 1">
                             <div class="product-quicview"><i class="ti-plus"></i></div>
                         </div>
                         <div class="category-description">
@@ -816,32 +830,55 @@
 
 
         </div>
+
+
+
+
+
+       
+        
+
+
+      
+
+
+
+        
         <!-- JavaScript for Carousel Functionality -->
-        <script>
-            const carousel = document.getElementById('carousel');
-            const items = document.querySelectorAll('.product-card');
-            const itemCount = items.length;
+       <script>
+        const carousel = document.getElementById('carousel');
+const items = document.querySelectorAll('.shopbycatagories_count');
+const itemCount = items.length;
 
-            let currentIndex = 0;
+let currentIndex = 0;
 
-            function scrollCarousel(direction) {
+function scrollCarousel(direction) {
     const itemsPerPage = window.innerWidth <= 768 ? 1 : 4; // Mobile: 1 item, Desktop: 4 items
+    const itemWidth = items[0].offsetWidth; // Get the width of one item
 
-    // Ensure currentIndex does not go out of bounds
-    const maxIndex = itemCount - itemsPerPage;
-    currentIndex = Math.max(0, Math.min(currentIndex + direction * itemsPerPage, maxIndex));
+    // Calculate the maximum index based on items per page
+    const maxIndex = Math.ceil(itemCount / itemsPerPage) - 1;
 
-    const itemWidth = items[0].offsetWidth; // Get item width
-    carousel.style.transform = `translateX(-${currentIndex * (itemWidth + 10)}px)`;
+    // Update current index based on direction
+    currentIndex += direction;
+
+    // Loop the carousel or prevent out-of-bounds scrolling
+    if (currentIndex < 0) {
+        currentIndex = maxIndex; // Go to last set of items
+    } else if (currentIndex > maxIndex) {
+        currentIndex = 0; // Go back to the first set of items
+    }
+
+    // Slide the carousel
+    //carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    carousel.style.transform = `translateX(-${currentIndex * 315}px)`;
 }
 
+// Initialize carousel on page load
+window.addEventListener('resize', () => scrollCarousel(0));
+scrollCarousel(0);
 
-            if (window.innerWidth <= 768) {
-                scrollCarousel(0);
-            }
-
-        </script>
-
+       </script>
 
         <!-- shop by catagories end -->
 
@@ -855,9 +892,9 @@
 
         <!-- Handpicked treasures area started -->
 
-        <div class="section_heading text-center">
-            <h2>Handpicked Treasures</h2>
-        </div>
+        <h2 class="heading_section">Handpicked Treasures</h2>
+        <!-- <div class="section_heading text-center">
+        </div> -->
 
         <div class="slideshow-container">
             <div class="slideshow">
@@ -920,16 +957,15 @@
 
 
         <!-- /* tradition and essence start*/ -->
+        
+
         <div class="essence">
             <!-- <div class="head">
-                Essence Of Hatt India
             </div> -->
+            <h2 class="heading_section">Essence Of Hatt India</h2>
 
             <div class="section_heading text-center">
-                <h2 style="padding-top: 0px;">
-                    Essence Of Hatt India
-
-                </h2>
+                
             </div>
             <div class="box">
                 <div class="props">
@@ -980,11 +1016,11 @@
 
         <!-- Our New Arrival section start -->
 
-        <div class="section_heading text-center">
-            <h2>Our New Arrival</h2>
-        </div>
+        <h2 class="heading_section">Our New Arrival</h2>
+        <!-- <div class="section_heading text-center">
+        </div> -->
 
-        <div class="slideshow-container">
+        <div class="slideshow-container mx-2">
             <div class="slideshow">
 
 
@@ -1223,7 +1259,7 @@
 
 
         <!-- ****** Customers Review  Start ****** -->
-        <section class="karl-testimonials-area section_padding_100">
+        <!-- <section class="karl-testimonials-area section_padding_100">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1237,7 +1273,6 @@
                     <div class="col-12 col-md-8">
                         <div class="karl-testimonials-slides owl-carousel">
 
-                            <!-- Single Testimonial Area -->
                             <div class="single-testimonial-area text-center secondary_bg ">
                                 <div class="customerreviewname">Sayandip Paul<span class="star"> ***</Paulspan>
                                 </div>
@@ -1250,9 +1285,6 @@
                                     wore this for my sister's wedding, and it made me feel like royalty. Highly
                                     recommend this if you're looking for something truly authentic and timeless.</h6>
                                 <div class="testimonial-info d-flex align-items-center justify-content-center">
-                                    <!-- <div class="tes-thumbnail">
-                                    <img src="img/bg-img/tes-1.jpg" alt="">
-                                </div> -->
                                     <div class="testi-data">
                                         <p>Helpful? <i class="fa fa-thumbs-up"></i>(0)</p>
                                         <span>Report <i class="fa fa-thumbs-down"></i>(1)</span>
@@ -1260,7 +1292,6 @@
                                 </div>
                             </div>
 
-                            <!-- Single Testimonial Area -->
                             <div class="single-testimonial-area text-center secondary_bg">
                                 <div class="customerreviewname">Sayandip Paul<span class="star"> ***</Paulspan>
                                 </div>
@@ -1273,16 +1304,12 @@
                                     wore this for my sister's wedding, and it made me feel like royalty. Highly
                                     recommend this if you're looking for something truly authentic and timeless.</h6>
                                 <div class="testimonial-info d-flex align-items-center justify-content-center">
-                                    <!-- <div class="tes-thumbnail">
-                                    <img src="img/bg-img/tes-1.jpg" alt="">
-                                </div> -->
                                     <div class="testi-data">
                                         <p>Helpful? <i class="fa fa-thumbs-up"></i>(0)</p>
                                         <span>Report <i class="fa fa-thumbs-down"></i>(1)</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Single Testimonial Area -->
                             <div class="single-testimonial-area text-center secondary_bg">
                                 <div class="customerreviewname">Sayandip Paul<span class="star"> ***</Paulspan>
                                 </div>
@@ -1295,9 +1322,7 @@
                                     wore this for my sister's wedding, and it made me feel like royalty. Highly
                                     recommend this if you're looking for something truly authentic and timeless.</h6>
                                 <div class="testimonial-info d-flex align-items-center justify-content-center">
-                                    <!-- <div class="tes-thumbnail">
-            <img src="img/bg-img/tes-1.jpg" alt="">
-        </div> -->
+                     
                                     <div class="testi-data">
                                         <p>Helpful? <i class="fa fa-thumbs-up"></i>(0) <br> Report <i class="fa fa-thumbs-down"></i>(1)</p>
                                     </div>
@@ -1309,15 +1334,118 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- ****** Customers Review  End ****** -->
 
 
-        <!-- new recently viewed area started -->
 
+<!-- new customer review start -->
+
+<h2 class="heading_section">Customers Review</h2>
+<div class="card-container">
+    <div class="card">
+        <div class="card-text">
+            <h3 class="my-2">Debleena sen <span class="star">*****</span></h3>
+            <h3 class="reviewproductname">Santeepuri katha stich.</h3>
+            <sub>20 hours ago</sub>
+<div class="reviewtext">
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem tempore accusamus eum sequi voluptatum, blanditiis harum? Quos soluta, consequuntur, repellendus, impedit quae ab pariatur quasi voluptatem voluptates iste alias reprehenderit? Accusantium reprehenderit, facilis voluptatibus unde rem dignissimos autem illum, ex vitae fuga alias, error rerum delectus eveniet maiores nostrum. Ad pariatur aliquam blanditiis veniam animi perspiciatis laboriosam repellendus, molestias quae iure nisi quos fugit accusamus aut dolorem culpa tenetur at!</p>
+</div>
+            <!-- <a href="#" class="btn">View More</a> -->
+
+            <div class="reviewlastoptions">
+                <span>Helpful?</span>
+                <span> <i class="fa fa-thumbs-up"></i>(0)</span>
+                <span> <i class="fa fa-thumbs-down"></i>(1)</span>
+                <span>Report</span>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="img/product-img/70's Magenta Embroidered Mule.jpg" alt="Product 1">
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-text">
+            <h3 class="my-2">Debleena sen <span class="star">*****</span></h3>
+            <h3 class="reviewproductname">Santeepuri katha stich.</h3>
+            <sub>20 hours ago</sub>
+<div class="reviewtext">
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem tempore accusamus eum sequi voluptatum, blanditiis harum? Quos soluta, consequuntur, repellendus, impedit quae ab pariatur quasi voluptatem voluptates iste alias reprehenderit? Accusantium reprehenderit, facilis voluptatibus unde rem dignissimos autem illum, ex vitae fuga alias, error rerum delectus eveniet maiores nostrum. Ad pariatur aliquam blanditiis veniam animi perspiciatis laboriosam repellendus, molestias quae iure nisi quos fugit accusamus aut dolorem culpa tenetur at!</p>
+</div>
+            <!-- <a href="#" class="btn">View More</a> -->
+
+            <div class="reviewlastoptions">
+                <span>Helpful?</span>
+                <span> <i class="fa fa-thumbs-up"></i>(0)</span>
+                <span> <i class="fa fa-thumbs-down"></i>(1)</span>
+                <span>Report</span>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="img/product-img/70's Magenta Embroidered Mule.jpg" alt="Product 1">
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-text">
+            <h3 class="my-2">Debleena sen <span class="star">*****</span></h3>
+            <h3 class="reviewproductname">Santeepuri katha stich.</h3>
+            <sub>20 hours ago</sub>
+<div class="reviewtext">
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem tempore accusamus eum sequi voluptatum, blanditiis harum? Quos soluta, consequuntur, repellendus, impedit quae ab pariatur quasi voluptatem voluptates iste alias reprehenderit? Accusantium reprehenderit, facilis voluptatibus unde rem dignissimos autem illum, ex vitae fuga alias, error rerum delectus eveniet maiores nostrum. Ad pariatur aliquam blanditiis veniam animi perspiciatis laboriosam repellendus, molestias quae iure nisi quos fugit accusamus aut dolorem culpa tenetur at!</p>
+</div>
+            <!-- <a href="#" class="btn">View More</a> -->
+
+            <div class="reviewlastoptions">
+                <span>Helpful?</span>
+                <span> <i class="fa fa-thumbs-up"></i>(0)</span>
+                <span> <i class="fa fa-thumbs-down"></i>(1)</span>
+                <span>Report</span>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="img/product-img/70's Magenta Embroidered Mule.jpg" alt="Product 1">
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-text">
+            <h3 class="my-2">Debleena sen <span class="star">*****</span></h3>
+            <h3 class="reviewproductname">Santeepuri katha stich.</h3>
+            <sub>20 hours ago</sub>
+<div class="reviewtext">
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem tempore accusamus eum sequi voluptatum, blanditiis harum? Quos soluta, consequuntur, repellendus, impedit quae ab pariatur quasi voluptatem voluptates iste alias reprehenderit? Accusantium reprehenderit, facilis voluptatibus unde rem dignissimos autem illum, ex vitae fuga alias, error rerum delectus eveniet maiores nostrum. Ad pariatur aliquam blanditiis veniam animi perspiciatis laboriosam repellendus, molestias quae iure nisi quos fugit accusamus aut dolorem culpa tenetur at!</p>
+</div>
+            <!-- <a href="#" class="btn">View More</a> -->
+
+            <div class="reviewlastoptions">
+                <span>Helpful?</span>
+                <span> <i class="fa fa-thumbs-up"></i>(0)</span>
+                <span> <i class="fa fa-thumbs-down"></i>(1)</span>
+                <span>Report</span>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="img/product-img/70's Magenta Embroidered Mule.jpg" alt="Product 1">
+        </div>
+    </div>
+   
+    
+</div>
+
+  
+  <!-- new customer review end -->
+
+
+
+        <!-- new recently viewed area started -->
+<!-- 
         <div class="section_heading text-center">
             <h2>Recently Viewed</h2>
-        </div>
+        </div> -->
+        <h2 class="heading_section">Recently Viewed</h2>
 
         <div class="slideshow-container">
             <div class="slideshow">
