@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1050px) {
     .welcome_slide_text > h2,
     .single_catagory_area h2 {
         font-size: 70px;
@@ -6,7 +6,7 @@
     
    
 }
-@media only screen and (min-width: 768px) and (max-width: 1350px) {
+@media only screen and (min-width: 768px) and (max-width: 1050px) {
     .navbar-toggler {
         position: absolute;
         /* display: none; */
