@@ -851,6 +851,9 @@ margin-bottom: 20px;
 
 /* csutomer review start */
 /* For larger screens (laptop and above) */
+.mobilereview{
+    display: none;
+}
 .review_content {
     display: flex;
     flex-direction: row;
@@ -883,6 +886,13 @@ margin-bottom: 20px;
 
     .card-body {
         order: 2; /* Text below the image */
+    }
+    .mobilereview{
+        display: block;
+    }
+
+    .laptopreview{
+        display: none;
     }
 }
 
