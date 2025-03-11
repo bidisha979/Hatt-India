@@ -98,7 +98,10 @@
 
 /* navbar start */
 
-
+/* .nav-item:hover{
+    background-color: #8b0000;
+    color:#f5ebd7;
+} */
 
 .navbar {
     display: flex;
@@ -328,7 +331,7 @@
     display: none;
 }
 .catagories :hover{
-    background-color:#f5ebd7;   
+    background-color:#f7a7a7;   
     color:#f5ebd7 ;
     border-radius: 5px;
 }
@@ -442,6 +445,13 @@ margin-right: 30px;
 /* padding: 20px 0; */
 } 
 
+@media (max-width: 1000px) {
+    .top_catagory_area{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .art-img{
 height: 300px;
 width: 100%;
@@ -456,9 +466,9 @@ margin-bottom: 20px;
     padding: 50px 50px;
     /* padding-top: 10px; */
     width: auto;
-    margin:auto;
+    /* margin:20px; */
     height: 600px;
-    width:35%;
+    /* width:35%; */
     /* padding:20 px ; */
     -webkit-box-flex: 0;
     -webkit-transition-duration: 500ms;
@@ -767,11 +777,11 @@ margin-bottom: 20px;
 /* Style the arrow icons */
 .carousel-control-prev-icon, 
 .carousel-control-next-icon {
-    background-color: #8b0000; /* Change color on hover */
+    background-color: grey; /* Change color on hover */
 
     border-radius: 50%; /* Make it circular */
-    width: 50px; /* Size of the icon */
-    height: 50px;
+    width: 30px; /* Size of the icon */
+    height: 30px;
     background-size: 60%; /* Resize the icon */
     background-position: center;
     background-repeat: no-repeat;
