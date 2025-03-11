@@ -4449,7 +4449,7 @@ tbody.collapse.show {
     }
 }
 
-@media (min-width:1050px) {
+@media (min-width:1260px) {
     .navbar-expand-lg {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -8270,7 +8270,7 @@ button.bg-dark:hover {
 
 .pt-5,
 .py-5 {
-    padding-top: 2rem !important
+    padding-top: 1rem !important
 }
 
 .pr-5,

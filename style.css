@@ -26,7 +26,7 @@
     @media screen and (max-width:1400px) {
     .heading_section{
         font-size: 22px;
-        margin: 10px;
+        margin: 20px;
     }   
     }
 .top_contact{
@@ -135,12 +135,12 @@
     /* transform: translateX(200%); */
     /* float: right; */
 
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 
 /* Navbar adjustments for large screens */
-@media (min-width: 1050px) {
+@media (min-width: 1260px) {
     .navbar {
         flex-wrap: nowrap;
     }
@@ -173,10 +173,10 @@
 /* tradition and essence start*/
 
 .essence{
-    padding: 20px 20px;
+    padding: 2px 20px;
     background-color: #f5ebd7;
     color: black;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .head{
@@ -196,6 +196,7 @@
             flex-wrap: wrap; /* Enable wrapping */
             gap: 20px;
             justify-content: space-between;
+            padding-bottom: 5px;
 }
 
 .props{
@@ -239,7 +240,7 @@
 .slideshow-container {
     overflow-x: scroll; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     scroll-snap-type: x mandatory; /* Snap scrolling */
     -webkit-overflow-scrolling: touch;
     padding-left: 20px; /* Smooth scrolling on iOS */
@@ -318,7 +319,7 @@
 
 /* Optional scrollbar styling */
 .slideshow-container::-webkit-scrollbar {
-    height: 8px;
+    height: 6px;
 }
 
 .slideshow-container::-webkit-scrollbar-thumb {
@@ -434,7 +435,7 @@
 }
 
 /* Responsive styles */
-@media (max-width: 1050px) {
+@media (max-width: 1260px) {
     .search-box{
         display: none;
         /* visibility: hidden; */
@@ -489,7 +490,7 @@ margin-right: 30px;
 /* padding: 20px 0; */
 } 
 
-@media (max-width: 1000px) {
+@media (max-width: 903px) {
     .top_catagory_area{
         display: flex;
         flex-direction: column;
@@ -513,7 +514,7 @@ margin-bottom: 20px;
 .art_lastbuttons{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-top: 15px;
     gap: 5px;
 }
 
@@ -599,7 +600,7 @@ margin-bottom: 20px;
  .carousel-wrapper {
     position: relative;
     max-width: 100%;
-    margin: auto;
+    margin-top: 20px;
     overflow: hidden;
     /* padding: 20px 0; */
     background-color: #f5ebd7;
@@ -609,7 +610,7 @@ margin-bottom: 20px;
     display: flex;
     transition: transform 0.5s ease;
     gap: 20px;
-    padding-top :30px;
+    padding-top :15px;
 }
 
 /* Product Card */
@@ -666,7 +667,7 @@ margin-bottom: 20px;
 .category-description {
     padding: 8px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bolder;
 }
 .product-description p{
@@ -710,7 +711,7 @@ margin-bottom: 20px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #8b0000;
+    background: gray;
     color: white;
     border: none;
     padding: 10px;
@@ -803,7 +804,7 @@ margin-bottom: 20px;
 
 /* quality section start */
 .quality{
-    flex: 0 0 calc(25% - 20px);
+    flex: 0 0 calc(30% - 50px);
     
     background: none;
     width: 90px;
@@ -811,7 +812,7 @@ margin-bottom: 20px;
     word-wrap: nowrap;    
     white-space: normal;          /* Allow text to wrap */
     overflow-wrap: nowrap; 
-    /* padding-left: 10px; */
+    padding-left: 20px;
 }
 .service_quality_container{
     /* margin-left: 200px; */

@@ -85,6 +85,9 @@
 .loadmorereviewbtn{
     /* color: #f5ebd7; */
     border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 15px;
   }
     
 .card-image img {
@@ -119,6 +122,7 @@
         width: 100px;
         margin: auto;
         order:1;
+        padding-top: 15px;
     }
     .reviewtext{
         margin-top: 25px;

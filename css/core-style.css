@@ -299,7 +299,7 @@ img {
 }
 
 .section_padding_100_0 {
-    padding: 30px 0 0;
+    /* padding: 30px 0 0; */
 }
 
 .section_padding_0_100 {
@@ -315,7 +315,7 @@ img {
 }
 
 .section_heading h2 {
-    margin-top: 25px;
+    /* margin-top: 25px; */
     padding-top: 25px;
     font-weight: bolder;
 
@@ -1321,7 +1321,8 @@ img {
 .footer_area {
     background-color: #f5ebd7;
     /* border-top: 2px solid #e5e5e5; */
-    padding: 100px 0 50px;
+    padding-top: 25px;
+    margin-top: 20px;
 }
 
 .footer_content > p {
@@ -1346,7 +1347,7 @@ img {
 }
 
 .art-info{
-    padding-top: 20px;
+    padding: 20px;
     background:rgb(255, 209, 192);
     display: flex;
     flex-direction: column;
