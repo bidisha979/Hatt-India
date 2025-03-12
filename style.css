@@ -254,7 +254,7 @@
     padding: 10px 0px;
 }
 .handpicked-item{
-    flex: 0 0 calc(25% - 20px);
+    /* flex: 0 0 calc(25% - 20px); */
 
 }
 .slide-item {
@@ -511,7 +511,7 @@ height: 300px;
 width: 100%;
 margin-bottom: 20px;
 }
-.art-text h1, p,a,sub{
+.art-text h1, .art-text p, .art-text a, .art-text sub{
     color: #8b0000;
     font-style: 'Playfair Display';
 }
@@ -686,6 +686,10 @@ margin-bottom: 20px;
     font-size: 15px;
     color: black;
     font-weight: lighter;
+}
+
+.product-description a{
+    font-size: 10px;
 }
 
 .product-price {
@@ -902,6 +906,15 @@ margin-bottom: 20px;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+}
+
+.card-text sub{
+    color: #3a3a3a;
+    font-weight: lighter;
+}
+
+.reviewtext p{
+    color: #3a3a3a;
 }
 
 .reviewimage img {
