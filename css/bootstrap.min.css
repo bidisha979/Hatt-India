@@ -8111,6 +8111,11 @@ button.bg-dark:hover {
     margin-right: 1.5rem !important
 }
 
+.mx-6 {
+    margin-right: 2rem !important;
+    margin-left: 2rem !important
+}
+
 .mb-4,
 .my-4 {
     margin-bottom: 1.5rem !important
@@ -8286,7 +8291,7 @@ button.bg-dark:hover {
 
 .pl-5,
 .px-5 {
-    padding-left: 3rem !important
+    /* padding-left: 3rem !important */
 }
 
 .m-auto {

@@ -88,7 +88,7 @@ a:focus {
     transition: all 500ms ease 0s;
     text-decoration: none;
     outline: none;
-    color: #000000;
+    color: #3a3a3a;
     font-family: 'Playfair Display';
     font-weight: 400;
 }
@@ -308,7 +308,7 @@ img {
 
 .section_heading {
    
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 
     position: relative;
     z-index: 1;
@@ -1137,6 +1137,7 @@ img {
     color: #9f9f9f;
     margin-bottom: 5px;
     display: block;
+    font-size: 15px;
 }
 
 .product-description p {

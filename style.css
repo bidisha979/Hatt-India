@@ -296,7 +296,7 @@
 /* Responsive for smaller screens */
 @media (max-width: 768px) {
     .slide-item {
-        flex: 0 0 calc(60% - 20px); /* 3 items per screen */
+        /* flex: 0 0 calc(60% - 20px); */
     }
     .slide-item1 {
         /* flex: 0 0 calc(60% - 20px); 3 items per screen */
@@ -623,17 +623,8 @@ margin-bottom: 20px;
 
 /* Product Card */
 .product-card {
-    flex: 0 0 calc(25% - 20px); /* 4 items on larger screens */
+    /* flex: 0 0 calc(25% - 20px); 4 items on larger screens */
     background: white;
-    /* border: 1px solid #ddd; */
-    /* border-radius: 10px; */
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-    overflow: auto;
-    /* text-align: center; */
-    /* padding: 10px; */
-    /* border: 2px solid #8b0000; */
-    /* max-width: 300px; */
-    /* margin: 30px; */
 }
 
 .bgw{
@@ -652,6 +643,11 @@ margin-bottom: 20px;
     /* overflow: scroll; */
     /* object-fit: contain; */
     /* content:  */
+}
+
+.recent{
+    height: 200px;
+    width: 150px;
 }
 
 .product-img img {
@@ -833,7 +829,7 @@ margin-bottom: 20px;
 
 /* quality section start */
 .quality{
-    flex: 0 0 calc(30% - 50px);
+    flex: 0 0 calc(25% - 0px);
     
     background: none;
     width: 90px;
@@ -841,7 +837,8 @@ margin-bottom: 20px;
     word-wrap: nowrap;    
     white-space: normal;          /* Allow text to wrap */
     overflow-wrap: nowrap; 
-    padding-left: 20px;
+    padding-left: 30px;
+    text-align: center;
 }
 .service_quality_container{
     /* margin-left: 200px; */
@@ -850,9 +847,10 @@ margin-bottom: 20px;
     margin: auto;
 }
 .quality p{
-    font-size: 20px;
+    font-size: 15px;
     color: black;
     /* margin-left: ; */
+    font-weight: bold;
 }
 /* quality section end */
 /* banner area */
