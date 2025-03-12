@@ -135,6 +135,8 @@
 .card {
     flex-direction: column;
     /* max-width: 300px; */
+    border: none;
+
 }
 .card-text{
     width: 100%;
@@ -163,7 +165,7 @@
     
 }
 /* For laptop screens: Add horizontal and vertical lines */
-@media (min-width: 769px) {
+@media (min-width: 969px) {
     .card-container {
         grid-gap: 0; /* Remove grid gap */
     }

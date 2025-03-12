@@ -17,104 +17,12 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f9f9f9;
+            background-color: #FFFFFF;
         }
 
-        .container {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 10px;
-            width: 90%;
-            height: 90%;
-            border: 2px solid #ccc;
-            padding: 10px;
-            background: #fff;
-        }
-
-        /* Left side: Big image */
-        .main-slide {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border: 2px solid #ccc;
-        }
-
-        .main-slide img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        /* Right side: Thumbnail list */
-        .thumbnail-container {
-            display: grid;
-            grid-template-rows: repeat(3, 1fr);
-            gap: 10px;
-            overflow-y: auto;
-            border: 2px solid #ccc;
-            padding: 10px;
-        }
-
-        .thumbnail {
-            width: 100%;
-            height: 100%;
-            border: 2px solid #ccc;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .thumbnail:hover {
-            transform: scale(1.05);
-        }
-
-        /* Input for image control */
-        input[type="radio"] {
-            display: none;
-        }
-
-        /* Linking thumbnail clicks to show big image */
-        #slide1:checked ~ .main-slide img:nth-child(1),
-        #slide2:checked ~ .main-slide img:nth-child(2),
-        #slide3:checked ~ .main-slide img:nth-child(3) {
-            display: block;
-        }
-
-        .main-slide img {
-            display: none;
-        }
-
-        /* Show first image by default */
-        #slide1:checked ~ .main-slide img:nth-child(1) {
-            display: block;
-        }
-    </style>
+       </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Left side: Large image slider -->
-        <div class="main-slide">
-            <input type="radio" id="slide1" name="slider" checked>
-            <input type="radio" id="slide2" name="slider">
-            <input type="radio" id="slide3" name="slider">
-
-            <img src="img/product-img/p1.jpg" alt="Image 1">
-            <img src="img/product-img/p2.jpg" alt="Image 2">
-            <img src="img/product-img/p3.jpg" alt="Image 3">
-        </div>
-
-        <!-- Right side: Thumbnail list -->
-        <div class="thumbnail-container">
-            <label for="slide1">
-                <img class="thumbnail" src="img/product-img/p1.jpg" alt="Thumbnail 1">
-            </label>
-            <label for="slide2">
-                <img class="thumbnail" src="img/product-img/p2.jpg" alt="Thumbnail 2">
-            </label>
-            <label for="slide3">
-                <img class="thumbnail" src="img/product-img/p3.jpg" alt="Thumbnail 3">
-            </label>
-        </div>
-    </div>
+   
 </body>
 </html>

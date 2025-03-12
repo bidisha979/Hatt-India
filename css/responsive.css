@@ -217,36 +217,6 @@ margin: 7px;
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 500px) {
-    .single_catagory_area {
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-                height:100px;
-                padding: 35px;
-
-    }
-    .art-img{
-        height: 150px;
-    }
-    .art-text h1{
-        font-size: 25px;
-        font-weight: bolder;
-    }
-    .artpessage{
-        height: 100px;
-        font-size: 15px;
-    }
-    .art-text a{
-        order: 1;
-        margin: 5px;
-        color: #8b0000;
-    }
-    .art-text sub{
-        order: 2;
-    }
-}
-
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .top_logo a img {
         max-width: 120px;
