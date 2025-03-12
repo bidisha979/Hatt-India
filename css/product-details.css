@@ -18,7 +18,7 @@
 .carousel-inner {
     display: block;
     width: 100%;
-    height: 600px;
+    height: 750px;
     object-fit: cover;
     overflow-y: scroll;
     
@@ -28,7 +28,7 @@
 .carousel-item img {
     display: block;
     width: 100%;
-    height: 600px;
+    height: 750px;
     align-items: stretch;
 }
 
@@ -40,7 +40,7 @@
     padding: 0;
     margin: 0;
    width: 100%;
-    height: 600px;
+    height: 750px;
     overflow-y: auto; 
     background-color: #f5ebd7;
     justify-content: center;
@@ -767,4 +767,340 @@
 .modal-content {
     box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.15);
     border: 1px solid #ebebeb;
+}
+
+
+/* first section after product details start */
+.first_section {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 parts text, 1 part image */
+    gap: 20px;
+    align-items: start;
+}
+
+.text-section {
+    padding: 20px;
+}
+
+.text-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-section p {
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #333;
+}
+
+.text-section ul {
+    list-style: none;
+    padding-left: 70px;
+}
+
+.text-section ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.text-section ul li::before {
+    content: "•";
+    color: #8b0000;
+    position: absolute;
+    left: -20px;
+}
+
+/* Image section styling */
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack on small screens */
+    }
+
+    .image-section img {
+        height: auto;
+    }
+}
+
+/* end of first section */
+
+
+/* Reviews Section */
+.reviews-section {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.reviews-header {
+    background-color: #f5ebdb;
+    padding: 15px;
+}
+
+.reviews-header h2 {
+    font-size: 24px;
+}
+
+/* Main Container */
+.reviews-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Section - Summary */
+.review-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rating-score h1 {
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: #8b0000;
+    margin-left: 10px;
+}
+
+.review-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style the size guide container */
+.size-guide {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    /* background: #f5ebdb; */
+    /* border: 1px solid #e0d5c1; */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    /* font-family: 'Arial', sans-serif; */
+}
+
+/* Style the size labels */
+.size-guide span {
+    font-size: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style the range slider */
+.size-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60%;
+    height: 2px;
+    border-radius: 5px;
+    background: #e0d5c1;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+/* Style the slider thumb (handle) */
+.size-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8b0000;
+    cursor: pointer;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.size-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8b0000;
+    cursor: pointer;
+}
+
+/* Optional: Change background on hover */
+.size-slider:hover {
+    background: #d9c5a3;
+}
+
+/* Middle Section - Breakdown */
+.review-breakdown h3 {
+    margin-bottom: 10px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar {
+    flex: 1;
+    height: 10px;
+    background: #ddd;
+}
+
+.bar .filled {
+    height: 100%;
+    background: #8b0000;
+}
+
+.submit-review {
+    margin-top: 20px;
+}
+
+/* Right Section - Filters */
+.review-filters h3 {
+    margin-bottom: 10px;
+}
+
+.review-filters input,
+.review-filters select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #8b0000;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .reviews-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+
+    .size-guide {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* review section end */
+
+/* Section styling */
+.size-fit-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f5ebdb;
+    border: 1px solid #eee;
+}
+
+/* Image container */
+.image-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fit details */
+.fit-details {
+    flex: 1;
+    padding: 20px;
+    min-width: 300px;
+}
+
+.fit-details h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.size-chart-btn {
+    background: none;
+    border: 2px solid #8b0000;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.size-chart-btn:hover {
+    background-color: #8b0000;
+    color: #fff;
+}
+
+.fit-info {
+    /* list-style: none; */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.fit-info ul {
+    list-style: none;
+    padding-left: 70px;
+}
+
+.fit-info  li {
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.fit-info  li::before {
+    content: "•";
+    color: #8b0000;
+    position: absolute;
+    left: -20px;
+}
+
+
+.fit-info li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.fit-info a {
+    color: #8b0000;
+    text-decoration: none;
+}
+
+.fit-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .size-fit-section {
+        flex-direction: column;
+    }
+
+    .fit-details {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fit-details h2 {
+        font-size: 24px;
+    }
+
+    .fit-info li {
+        font-size: 14px;
+    }
 }
