@@ -285,43 +285,141 @@
                     <div class="col-12 col-md-6">
                         <div class="single_product_desc">
 
-                            <h4 class="title"><a href="#">Long Yellow Dress</a></h4>
-
-                            <h4 class="price">$ 39.99</h4>
-
-                            <p class="available">Available: <span class="text-muted">In Stock</span></p>
-
+                            <h5 class="attraction_points">BEST SELLER</h5>
                             <div class="single_product_ratings mb-15">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>4.0 (234 customer reviews)</span>
+
                             </div>
 
+                            <span class="title" href="#">Varanasi - Red Satin Silk Handloom
+                                Banarasi Lehenga</span>
+
+                            <!-- <h4 class="price">$ 39.99</h4> -->
+                             <div class="price">
+                                 <span class="old-price">₹ 2,999</span>
+                                <span class="new-price">₹ 1,999</span>
+                                <span class="offer-amount">(20% Off)</span>
+                             </div>
+
+                            <div class="available">(Incl. of all taxes) </div>
+
+                         
                             <div class="widget size mb-50">
-                                <h6 class="widget-title">Size</h6>
+                                <h6 class="widget-title" >Pick Your Color....</h6>
                                 <div class="widget-desc">
                                     <ul>
-                                        <li><a href="#">32</a></li>
-                                        <li><a href="#">34</a></li>
-                                        <li><a href="#">36</a></li>
-                                        <li><a href="#">38</a></li>
-                                        <li><a href="#">40</a></li>
-                                        <li><a href="#">42</a></li>
+                                        <li><a href="#"> </a></li>
+                                        <li><a href="#"> </a></li>
+                                        <li><a href="#"> </a></li>
+                                       
                                     </ul>
                                 </div>
                             </div>
 
+                            <select id="size" class="size_list">
+                                <option class="size_list_value" value="S">Small (S)</option>
+                                <option class="size_list_value" value="M">Medium (M)</option>
+                                <option class="size_list_value" value="L">Large (L)</option>
+                                <option class="size_list_value" value="XL">Extra Large (XL)</option>
+                                <option class="size_list_value" value="XXL">Double Extra Large (XXL)</option>
+                            </select>
+                            <div class="size_information">
+                                <span href="">Size & Fit Information</span>
+                                <span>view size chart</span>
+                            </div>
+                            <div class="product_information">
+                                <span class="highlight_information">Fits small </span>based on 7 customer review
+<br>
+
+                                <span class="highlight_information">85 people </span> looked at this item in the last hour.
+                            </div>
+
                             <!-- Add to Cart Form -->
-                            <form class="cart clearfix mb-50 d-flex" method="post">
-                                <div class="quantity">
-                                    <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
-                                    <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                            <div class="cart clearfix mb-50 d-flex addtocartoptions">
+                                <div>
+                                    <button type="button" name="addtocart" value="5" class="btn cart-submit addtocart d-block">
+                                        Add to Bag
+                                    </button>
                                 </div>
-                                <button type="submit" name="addtocart" value="5" class="btn cart-submit d-block">Add to cart</button>
-                            </form>
+                                <div>
+                                    <i class="fa fa-heart" style="font-size: 24px; color: #8b0000;"></i>
+                                </div>
+                                <div>
+                                    <!-- Counter with + and - buttons -->
+                                    <div class="counter">
+                                        <button onclick="decrease()">-</button>
+                                        <input type="number" id="quantity" value="1" min="1">
+                                        <button onclick="increase()">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+
+
+
+
+
+                            <!-- script for counter -->
+                            <script>
+                                // Counter functionality
+                                const quantityInput = document.getElementById('quantity');
+                            
+                                function increase() {
+                                    quantityInput.stepUp();
+                                }
+                            
+                                function decrease() {
+                                    if (quantityInput.value > 1) {
+                                        quantityInput.stepDown();
+                                    }
+                                }
+                            </script>
+                            <!-- script for counter ends  -->
+
+                            <div class="delivery-info">
+                                <p><i class="fa fa-map-marker-alt"></i> Delivered by 13th Feb - <b>721429</b></p>
+                                
+                                <div class="info-item">
+                                    <i class="fa fa-truck"></i>
+                                    <span>Enjoy free delivery on all products, anywhere in India!</span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <i class="fa fa-box-open"></i>
+                                    <span>Hassle-free returns & exchanges within 7 days! <a href="#">Read More</a></span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <i class="fa fa-award"></i>
+                                    <span>100% authentic products with quality guaranteed!</span>
+                                </div>
+                            
+                                <div class="know-product">
+                                    <a href="#"><b>Know Your Product</b> <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+done till here
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+
+
+
+
+
 
                             <div id="accordion" role="tablist">
                                 <div class="card">
