@@ -820,12 +820,18 @@
 
 /* Responsive for mobile */
 @media (max-width: 768px) {
-    .container {
+    .first_section {
         grid-template-columns: 1fr; /* Stack on small screens */
     }
 
     .image-section img {
         height: auto;
+    }
+    .text-section{
+        order: 2;
+    }
+    .image-section{
+        order: 1;
     }
 }
 
