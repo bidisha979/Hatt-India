@@ -11,8 +11,8 @@
 .card {
     display: grid;
     /* flex-direction: row; */
-    grid-template-columns: 2fr 1fr;
-    /* gap: 20px; */
+    /* grid-template-columns: 2fr 1fr; */
+    gap: 20px;
     /* background-color: #fff; */
     /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
     /* border-radius: 10px; */
@@ -134,9 +134,9 @@
     }
     
 .card {
-    flex-direction: column;
+    /* flex-direction: column; */
     /* max-width: 300px; */
-    border: none;
+    /* border: none; */
 
 }
 .card-text{
