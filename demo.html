@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Slider (No JS)</title>
+    <title>Image Slider with Thumbnails</title>
     <style>
         /* Basic reset */
         * {
@@ -13,118 +13,108 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #f0f0f0;
+            background-color: #f9f9f9;
         }
 
-        .slider-container {
-            position: relative;
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 10px;
             width: 90%;
-            max-width: 1200px;
+            height: 90%;
+            border: 2px solid #ccc;
+            padding: 10px;
+            background: #fff;
         }
 
-        .slider-wrapper {
+        /* Left side: Big image */
+        .main-slide {
             display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
+            border: 2px solid #ccc;
         }
 
-        .slide {
-            flex: 0 0 100%;
-            transition: transform 0.5s ease;
-        }
-
-        .slide img {
+        .main-slide img {
             width: 100%;
             height: auto;
+            object-fit: cover;
         }
 
-        /* Navigation buttons */
-        .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #000;
-            color: #fff;
-            border: none;
+        /* Right side: Thumbnail list */
+        .thumbnail-container {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            overflow-y: auto;
+            border: 2px solid #ccc;
             padding: 10px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #ccc;
             cursor: pointer;
-            z-index: 10;
+            transition: transform 0.2s;
         }
 
-        .prev {
-            left: 0;
+        .thumbnail:hover {
+            transform: scale(1.05);
         }
 
-        .next {
-            right: 0;
-        }
-
-        /* Checkbox trick for navigation */
+        /* Input for image control */
         input[type="radio"] {
             display: none;
         }
 
-        /* Slide navigation */
-        #slide1:checked ~ .slider-wrapper {
-            transform: translateX(0%);
+        /* Linking thumbnail clicks to show big image */
+        #slide1:checked ~ .main-slide img:nth-child(1),
+        #slide2:checked ~ .main-slide img:nth-child(2),
+        #slide3:checked ~ .main-slide img:nth-child(3) {
+            display: block;
         }
 
-        #slide2:checked ~ .slider-wrapper {
-            transform: translateX(-100%);
+        .main-slide img {
+            display: none;
         }
 
-        #slide3:checked ~ .slider-wrapper {
-            transform: translateX(-200%);
-        }
-
-        #slide4:checked ~ .slider-wrapper {
-            transform: translateX(-300%);
-        }
-
-        /* Responsive layout */
-        @media (min-width: 768px) {
-            .slide {
-                flex: 0 0 25%; /* 4 images for laptop */
-            }
+        /* Show first image by default */
+        #slide1:checked ~ .main-slide img:nth-child(1) {
+            display: block;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Left side: Large image slider -->
+        <div class="main-slide">
+            <input type="radio" id="slide1" name="slider" checked>
+            <input type="radio" id="slide2" name="slider">
+            <input type="radio" id="slide3" name="slider">
 
-<div class="slider-container">
-    <!-- Radio buttons for navigation -->
-    <input type="radio" id="slide1" name="slider" checked>
-    <input type="radio" id="slide2" name="slider">
-    <input type="radio" id="slide3" name="slider">
-    <input type="radio" id="slide4" name="slider">
+            <img src="img/product-img/p1.jpg" alt="Image 1">
+            <img src="img/product-img/p2.jpg" alt="Image 2">
+            <img src="img/product-img/p3.jpg" alt="Image 3">
+        </div>
 
-    <!-- Slider images -->
-    <div class="slider-wrapper">
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF5733" alt="Image 1"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/33FF57" alt="Image 2"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/5733FF" alt="Image 3"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
-        <div class="slide"><img src="https://via.placeholder.com/300x200/FF33A1" alt="Image 4"></div>
+        <!-- Right side: Thumbnail list -->
+        <div class="thumbnail-container">
+            <label for="slide1">
+                <img class="thumbnail" src="img/product-img/p1.jpg" alt="Thumbnail 1">
+            </label>
+            <label for="slide2">
+                <img class="thumbnail" src="img/product-img/p2.jpg" alt="Thumbnail 2">
+            </label>
+            <label for="slide3">
+                <img class="thumbnail" src="img/product-img/p3.jpg" alt="Thumbnail 3">
+            </label>
+        </div>
     </div>
-
-    <!-- Navigation buttons -->
-    <label for="slide1" class="nav-btn prev">❮</label>
-    <label for="slide2" class="nav-btn next">❯</label>
-    <label for="slide3" class="nav-btn next">❯</label>
-    <label for="slide4" class="nav-btn next">❯</label>
-</div>
-
 </body>
 </html>
