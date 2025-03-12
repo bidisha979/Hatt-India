@@ -466,7 +466,7 @@ h6 {
 }
 
 hr {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     margin-bottom: 1rem;
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, .1)
@@ -8060,7 +8060,7 @@ button.bg-dark:hover {
 
 .mr-2,
 .mx-2 {
-    margin-right: .5rem !important
+    margin-right: 4rem !important
 }
 
 .mb-2,
@@ -8070,7 +8070,7 @@ button.bg-dark:hover {
 
 .ml-2,
 .mx-2 {
-    margin-left: .5rem !important
+    margin-left: 4rem !important
 }
 
 .m-3 {
