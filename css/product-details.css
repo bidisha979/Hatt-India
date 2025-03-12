@@ -2,6 +2,227 @@
 /* ------------------------
 :: 15.0 Breadcumb Area CSS
 ------------------------ */
+.single_product_thumb{
+    /* max-height: 500px; */
+    /* overflow-y: scroll; */
+}
+#product_details_slider {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 75% for items, 25% for indicators */
+    gap: 5px; /* Add space between sections */
+    /* align-items: stretch; Stretch items to fill height */
+    /* height: 500px; Full height */
+}
+
+/* Style the carousel inner section */
+.carousel-inner {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    overflow-y: scroll;
+}
+
+/* Style the carousel items */
+.carousel-item img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    align-items: stretch;
+}
+
+/* Style the indicators and move them to the right */
+.carousel-indicators_product_page {
+
+    /* gap: 5px; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   width: 100%;
+    height: 600px;
+    overflow-y: auto; 
+
+}
+.carousel-indicators_product_page::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color:#8b0000 ;
+}
+
+/* Style each indicator */
+.carousel-indicators_product_page li {
+    /* flex:1; */
+    margin-bottom: 10px;
+    width: 105px;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.carousel-indicators_product_page::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color:#8b0000 ;
+}
+.carousel-inn::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width:767px) {
+    .carousel-inner {
+        height: 400px;
+    }
+    
+    /* Style the carousel items */
+    .carousel-item img {
+        height: 400px;
+        align-items: stretch;
+    
+
+    }
+    
+    /* Style the indicators and move them to the right */
+    .carousel-indicators_product_page {
+    
+        height: 400px;
+    
+    }
+    
+    /* Style each indicator */
+    
+}
+
+@media screen and (max-width: 1050px) and (min-width: 768px) {
+    .carousel-inner {
+        display: block;
+        /* width: 100%; */
+        /* max-width: 225px; */
+        height: 400px;
+        object-fit: cover;
+        overflow-y: scroll;
+    }
+    
+    /* Style the carousel items */
+    .carousel-item img {
+        display: block;
+        width: 100%;
+        height: 400px;
+        align-items: stretch;
+        /* max-width: 225px; */
+
+    }
+    
+    /* Style the indicators and move them to the right */
+    .carousel-indicators_product_page {
+    
+        /* gap: 5px; */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+       width: 100%;
+       max-width: 225px;
+
+        height: 400px;
+        overflow-y: auto; 
+    
+    }
+    .carousel-indicators_product_page::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        background-color:#8b0000 ;
+    }
+    
+    /* Style each indicator */
+    .carousel-indicators_product_page li {
+        /* flex:1; */
+        margin-bottom: 10px;
+        width: 75px;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border 0.3s ease;
+    }
+    
+    
+}
+
+
+
+
+/* Highlight active indicator */
+.carousel-indicators_product_page .active {
+    /* border: 2px solid #8b0000; */
+}
+
+
+
+
+
+
+
+
+/* .carousel-indicators_product_page {
+    position: absolute;
+    right: 0;
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none
+} */
+ /* bottom: 10px; */
+    /* left: 0; */
+   
+
+/* .carousel-indicators_product_page li {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: rgba(255, 255, 255, .5)
+} */
+    /* width: 30px; */
+
+
+/* .carousel-indicators_product_page li::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    content: ""
+} */
+
+/* .carousel-indicators_product_page li::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    content: ""
+} */
+
+/* .carousel-indicators_product_page .active {
+    background-color: #fff
+} */
+
 
 .breadcumb_area {
     /* padding-top: 100px; */
@@ -209,7 +430,7 @@
 /* ------------------------------
 :: 17.0 Product Details Area CSS
 ------------------------------ */
-
+/* 
 .single_product_thumb {
     margin-bottom: 100px;
 }
@@ -246,7 +467,7 @@
 .single_product_thumb .carousel-indicators li.active {
     border: 1px solid #ddd;
 }
-
+ */
 .single_product_thumb .product_badge {
     top: 30px;
 }
