@@ -602,6 +602,7 @@ pre code {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+    margin-top: 15px;
     margin-right: auto;
     margin-left: auto
 }
@@ -4449,7 +4450,7 @@ tbody.collapse.show {
     }
 }
 
-@media (min-width:1260px) {
+@media (min-width:1205px) {
     .navbar-expand-lg {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;

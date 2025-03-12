@@ -26,7 +26,8 @@
     @media screen and (max-width:1400px) {
     .heading_section{
         font-size: 22px;
-        margin: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
     }   
     }
 .top_contact{
@@ -62,8 +63,8 @@
     flex-direction: row;
 } */
 .usericon{
-    margin: 0 15px;
-    font-size: 25px;
+    margin: 0 10px;
+    font-size: 20px;
 }
 .search-box {
     position: relative;
@@ -140,7 +141,7 @@
 
 
 /* Navbar adjustments for large screens */
-@media (min-width: 1260px) {
+@media (min-width: 1205px) {
     .navbar {
         flex-wrap: nowrap;
     }
@@ -173,10 +174,10 @@
 /* tradition and essence start*/
 
 .essence{
-    padding: 2px 20px;
+    padding: 0 20px;
     background-color: #f5ebd7;
     color: black;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .head{
@@ -274,7 +275,7 @@
     /* border: 2px solid #ccc; */
     /* border-radius: 10px; */
     background-color: #fff;
-    text-align: center;
+    /* text-align: center; */
     scroll-snap-align: start; /* Snap each item */
 }
 
@@ -616,7 +617,7 @@ margin-bottom: 20px;
 /* Product Card */
 .product-card {
     flex: 0 0 calc(25% - 20px); /* 4 items on larger screens */
-    background: #f5ebd7;
+    background: white;
     /* border: 1px solid #ddd; */
     /* border-radius: 10px; */
     /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
@@ -626,6 +627,10 @@ margin-bottom: 20px;
     /* border: 2px solid #8b0000; */
     max-width: 300px;
     /* margin: 30px; */
+}
+
+.bgw{
+    background-color: #f5ebd7;
 }
 .product-card::-webkit-scrollbar{
     display: none;
@@ -671,7 +676,7 @@ margin-bottom: 20px;
     font-weight: bolder;
 }
 .product-description p{
-    font-size: 20px;
+    font-size: 15px;
     color: black;
     font-weight: lighter;
 }
@@ -758,6 +763,7 @@ margin-bottom: 20px;
 #props-text{
     color: black;
     font-weight: lighter;
+    font-size: 15px;
 }
 
 @media (max-width: 910px) {
