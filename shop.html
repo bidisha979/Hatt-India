@@ -315,20 +315,27 @@
             <button class="btn-shop">Hide Filter <span class="icon-shop">▲</span></button>
             <!-- <button class="btn-shop mx-2">Sort By <span class="icon-shop">▲</span></button> -->
             <div class="dropdown-shop">
-                <button class="btn-shop">Sort By <span class="icon-shop">▲</span></button>
-                <div class="dropdown-content-shop">
-                    
-                    <a href="#">Price: Low to High</a>
-                    <a href="#">Price: High to Low</a>
-                    <a href="#">Newest Arrivals</a>
-                    <a href="#">Best Sellers</a>
-                </div>
+                <label for="sort-options-shop" class="dropdown-label-shop">Sort By:</label>
+                <select id="sort-options-shop" class="dropdown-select-shop">
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                    <option value="newest">Newest Arrivals</option>
+                    <option value="best-sellers">Best Sellers</option>
+                </select>
             </div>
             
         </div>
         <div class="pagination-shop">
-            <button class="page-btn-shop">1 <span class="icon-shop">▼</span></button>
-            <span class="page-info-shop">of 3</span>
+            <!-- <button class="page-btn-shop">1 <span class="icon-shop">▼</span></button> -->
+            <div class="dropdown-shop">
+                <!-- <label for="page-shop" class="dropdown-label-shop">Page:</label> -->
+                <select id="page-shop" class="dropdown-select-shop">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+            </div>
+             <span class="page-info-shop">of 3</span>
             <button class="btn-shop view-all-shop">View All</button>
         </div>
     </div>
@@ -391,9 +398,52 @@
         <!-- Main Content -->
         <div class="main-content" id="main-content">
             <button class="hamburger-btn" id="hamburger-btn">☰</button>
-            <div class="product-image"><img src="https://via.placeholder.com/300" alt="Product 1"></div>
-            <div class="product-image"><img src="https://via.placeholder.com/300" alt="Product 2"></div>
-            <div class="product-image"><img src="https://via.placeholder.com/300" alt="Product 3"></div>
+            <div class="slide-item productnewarrival">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product-img/p1.jpg" alt="Product 3">
+                         <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-description">
+                        <p>Varanasi - Handwoven Pure Silk Peach Banarasi Lehenga Set</p>
+                        <h4 class="product-price"><span class="pricecut">Rs. 34,990</span><span class="pricein">
+                                Rs. 30,200 (20% off)</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item productnewarrival">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product-img/p1.jpg" alt="Product 3">
+                         <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-description">
+                        <p>Varanasi - Handwoven Pure Silk Peach Banarasi Lehenga Set</p>
+                        <h4 class="product-price"><span class="pricecut">Rs. 34,990</span><span class="pricein">
+                                Rs. 30,200 (20% off)</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item productnewarrival">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="img/product-img/p1.jpg" alt="Product 3">
+                         <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-description">
+                        <p>Varanasi - Handwoven Pure Silk Peach Banarasi Lehenga Set</p>
+                        <h4 class="product-price"><span class="pricecut">Rs. 34,990</span><span class="pricein">
+                                Rs. 30,200 (20% off)</span></h4>
+                    </div>
+                </div>
+            </div>
+           
         </div>
     </div>
 

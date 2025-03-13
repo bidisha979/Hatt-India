@@ -82,55 +82,33 @@
     font-size: 12px;
     margin-left: 5px;
 }
-/* Dropdown container */
-.dropdown-shop {
-    position: relative;
-    display: inline-block;
+
+
+
+/* Style the label */
+.dropdown-label-shop {
+    font-size: 14px;
+    color: #8b0000;
+    margin-right: 10px;
 }
 
-/* Dropdown button */
-.btn-shop {
-    border: 1px solid #8b0000;
-    background-color: #fff;
-    color: #8b0000;
+/* Style the select dropdown */
+.dropdown-select-shop {
     padding: 5px 10px;
     font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Dropdown content */
-.dropdown-content-shop {
-    display: none;
-    position: absolute;
-    background-color: #fff;
     border: 1px solid #8b0000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    min-width: 150px;
-    top: 100%;
-    left: 0;
-}
-
-/* Dropdown items */
-.dropdown-content-shop a {
-    padding: 10px;
-    text-decoration: none;
     color: #8b0000;
-    display: block;
-    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
 }
 
-.dropdown-content-shop a:hover {
+/* Optional: Style on hover */
+.dropdown-select-shop:hover {
     background-color: #f5ebdb;
 }
 
-/* Show dropdown on hover */
-.dropdown-shop:hover .dropdown-content-shop {
-    display: block;
-}
+
 
 /* Pagination styles */
 .pagination-shop {
@@ -155,6 +133,34 @@
     margin-left: 5px;
     font-size: 12px;
     color: #333;
+}
+/* Style the label */
+.dropdown-label-shop {
+    font-size: 14px;
+    color: #8b0000;
+    margin-right: 10px;
+}
+
+/* Style the select dropdown */
+.dropdown-select-shop {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #8b0000;
+    color: #8b0000;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%238b0000"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+/* Optional: Style on hover */
+.dropdown-select-shop:hover {
+    background-color: #f5ebdb;
 }
 
 /* View all button */
