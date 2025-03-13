@@ -17,7 +17,7 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/shop_page.css">
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
 
@@ -285,6 +285,171 @@
             </div>
         </div>
         <!-- ****** Quick View Modal Area End ****** -->
+
+
+<div class="container">
+    
+    <div class="breadcrumb_shop_page">
+        Home / Best Seller / Women / Sarees
+    </div>
+    
+    <p class="title_shop_page">TRADITIONAL SAREES</p>
+    
+    <p class="tagline_shop_page">“Your Look, Your Way”</p>
+    
+    <div class="button-container_shop_page">
+        <button>Wedding & Bridal Wear</button>
+        <button>Festive & Puja Wear</button>
+        <button>Work & Everyday Wear</button>
+        <button>Party & Evening Wear</button>
+        <button>Heritage & Hand-loom Classics</button>
+    </div>
+
+
+
+
+
+    <div class="top-bar-shop">
+        <div style="display: flex; flex-direction: row; justify-content:initial;">
+            
+            <button class="btn-shop">Hide Filter <span class="icon-shop">▲</span></button>
+            <!-- <button class="btn-shop mx-2">Sort By <span class="icon-shop">▲</span></button> -->
+            <div class="dropdown-shop">
+                <button class="btn-shop">Sort By <span class="icon-shop">▲</span></button>
+                <div class="dropdown-content-shop">
+                    
+                    <a href="#">Price: Low to High</a>
+                    <a href="#">Price: High to Low</a>
+                    <a href="#">Newest Arrivals</a>
+                    <a href="#">Best Sellers</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="pagination-shop">
+            <button class="page-btn-shop">1 <span class="icon-shop">▼</span></button>
+            <span class="page-info-shop">of 3</span>
+            <button class="btn-shop view-all-shop">View All</button>
+        </div>
+    </div>
+    
+
+    <div class="container_shop">
+<!-- Sidebar Menu -->
+<div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">×</button>
+    <h2>Filter Options</h2>
+
+    <ul class="menu_shop">
+        <li>
+            <div class="menu_shop-item">
+                <span>Price Range</span>
+                <button class="toggle-btn">+</button>
+            </div>
+            <ul class="menu_shop-submenu">
+                <li><label><input type="checkbox"> Under $50</label></li>
+                <li><label><input type="checkbox"> $50 - $100</label></li>
+                <li><label><input type="checkbox"> $100 - $200</label></li>
+            </ul>
+        </li>
+        <li>
+            <div class="menu_shop-item">
+                <span>Region of Origin</span>
+                <button class="toggle-btn">+</button>
+            </div>
+            <ul class="menu_shop-submenu">
+                <li><label><input type="checkbox"> India</label></li>
+                <li><label><input type="checkbox"> China</label></li>
+                <li><label><input type="checkbox"> Italy</label></li>
+            </ul>
+        </li>
+        <li>
+            <div class="menu_shop-item">
+                <span>Product Type</span>
+                <button class="toggle-btn">+</button>
+            </div>
+            <ul class="menu_shop-submenu">
+                <li><label><input type="checkbox"> Sarees</label></li>
+                <li><label><input type="checkbox"> Lehengas</label></li>
+                <li><label><input type="checkbox"> Salwar Suits</label></li>
+            </ul>
+        </li>
+        <li>
+            <div class="menu_shop-item">
+                <span>Material</span>
+                <button class="toggle-btn" >+</button>
+            </div>
+            <ul class="menu_shop-submenu">
+                <li><label><input type="checkbox"> Silk</label></li>
+                <li><label><input type="checkbox"> Cotton</label></li>
+                <li><label><input type="checkbox"> Linen</label></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <button class="hamburger-btn" id="hamburger-btn">☰</button>
+            <div class="product-image"><img src="https://via.placeholder.com/300" alt="Product 1"></div>
+            <div class="product-image"><img src="https://via.placeholder.com/300" alt="Product 2"></div>
+            <div class="product-image"><img src="https://via.placeholder.com/300" alt="Product 3"></div>
+        </div>
+    </div>
+
+    
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const mainContent = document.getElementById("main-content");
+    
+        // Show sidebar and hide hamburger
+        function openMenu() {
+            sidebar.classList.add("show");
+            sidebar.classList.remove("hidden");
+            mainContent.classList.remove("full-width");
+            hamburgerBtn.classList.add("hidden");
+        }
+    
+        // Hide sidebar and show hamburger
+        function closeMenu() {
+            if (window.innerWidth <= 1050) {
+                sidebar.classList.remove("show");
+            } else {
+                sidebar.classList.add("hidden");
+                mainContent.classList.add("full-width");
+            }
+            hamburgerBtn.classList.remove("hidden");
+        }
+    
+        // Event listeners
+        hamburgerBtn.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", closeMenu);
+    </script>
+
+    <script>
+// Handle submenu toggle
+document.querySelectorAll('.menu_shop-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+        const btn = item.querySelector('.toggle-btn');
+        btn.textContent = parent.classList.contains('active') ? '-' : '+';
+    });
+});
+
+    </script>
+
+
+</div>
+        
+
+
+
+
+
+
 
         <section class="shop_grid_area section_padding_100">
             <div class="container">

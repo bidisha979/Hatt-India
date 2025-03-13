@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider with Thumbnails</title>
+    <title>Responsive Shopping Page</title>
     <style>
-        /* Basic reset */
+        /* General styles */
         * {
             margin: 0;
             padding: 0;
@@ -13,16 +13,176 @@
         }
 
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
         }
 
-       </style>
+        /* Layout container */
+        .container {
+            display: flex;
+            height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: auto;
+            max-width: 300px;
+            background-color: #8b0000;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, width 0.3s ease;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            color: #f5ebdb;
+        }
+
+        /* Close button */
+        .close-btn {
+            display: block;
+            background: none;
+            color: #fff;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+
+        /* Main content */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background: #fff;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hamburger button */
+        .hamburger-btn {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            /* 
+            position: fixed;
+             */
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: none; /* Hidden by default for desktop */
+        }
+
+        /* Responsive behavior */
+        @media screen and (max-width: 1050px) {
+            .sidebar {
+                position: fixed;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transform: translateX(-100%);
+                z-index: 1000;
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            .hamburger-btn {
+                display: block;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (min-width: 1051px) {
+            .sidebar.hidden {
+                display: none;
+            }
+
+            .main-content.full-width {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-   
+    <button class="hamburger-btn" id="hamburger-btn">☰</button>
+
+<div class="container">
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">×</button>
+        <h2>Shop Categories</h2>
+        <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- <button class="hamburger-btn" id="hamburger-btn">☰</button> -->
+        <h1>Welcome to Our Shop</h1>
+        <p>Browse through our amazing collection of fashion items and accessories. Don’t miss the latest trends and exclusive offers!</p>
+    </div>
+</div>
+
+<script>
+    const sidebar = document.getElementById("sidebar");
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const mainContent = document.getElementById("main-content");
+
+    // Show sidebar and hide hamburger
+    function openMenu() {
+        sidebar.classList.add("show");
+        sidebar.classList.remove("hidden");
+        mainContent.classList.remove("full-width");
+        hamburgerBtn.style.display = "none"; // Hide hamburger when menu is open
+    }
+
+    // Hide sidebar and show hamburger
+    function closeMenu() {
+        if (window.innerWidth <= 1050) {
+            sidebar.classList.remove("show"); // Mobile: slide out
+        } else {
+            sidebar.classList.add("hidden"); // Laptop: hide sidebar
+            mainContent.classList.add("full-width");
+        }
+        hamburgerBtn.style.display = "block"; // Show hamburger when menu is closed
+    }
+
+    // Event listeners
+    hamburgerBtn.addEventListener("click", openMenu);
+    closeBtn.addEventListener("click", closeMenu);
+</script>
+
 </body>
 </html>
