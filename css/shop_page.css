@@ -108,7 +108,11 @@
     background-color: #f5ebdb;
 }
 
-
+.leftbuttonstopbar{
+    display: flex;
+     flex-direction: row;
+      justify-content:initial;
+}
 
 /* Pagination styles */
 .pagination-shop {
@@ -173,10 +177,28 @@
 /* Responsive for smaller screens */
 @media screen and (max-width: 768px) {
     .top-bar-shop {
-        grid-template-columns: repeat(4, 1fr); /* Always 4 in a row */
-        gap: 5px;
+        /* grid-template-columns: repeat(4, 1fr);  */
+        /* gap: 5px; */
         padding: 5px;
+        display: block;
+
     }
+    .pagination-shop {
+        display: flex;
+        /* align-items: center;
+        justify-content: center; */
+        align-items: center;
+        justify-content: center;
+    }
+    
+.leftbuttonstopbar{
+    /* display: flex;
+     flex-direction: row; */
+      justify-content:center;
+      margin-bottom: 10px;
+}
+
+    
 
     .btn-shop, .page-btn-shop {
         padding: 3px;
@@ -295,17 +317,7 @@
             transform: scale(1.05);
         }
 
-        /* Close button */
-        .close-btn {
-            display: block;
-            background: none;
-            color: #fff;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            align-self: flex-end;
-        }
-
+      
         /* Main content */
         .main-content {
             flex-grow: 1;
@@ -317,6 +329,9 @@
             gap: 20px;
             justify-content: center;
         }
+
+
+        
 
         .product-image {
             width: calc(33.333% - 20px);
@@ -335,39 +350,54 @@
 
         /* Hamburger button */
         .hamburger-btn {
-            font-size: 24px;
+            /* font-size: 24px;
             background: none;
             border: none;
             cursor: pointer;
             position: fixed;
             top: 20px;
             left: 20px;
-            z-index: 1001;
+            z-index: 1001; */
             display: none;
         }
+  /* Close button */
+  .close-btn {
+    display: none;
+     }
 
         /* Responsive behavior */
         @media screen and (max-width: 1050px) {
             .sidebar {
-                position: fixed;
+                position: sticky;
                 height: 100%;
-                top: 0;
-                left: 0;
+                /* top: 0i0; */
                 transform: translateX(-100%);
                 z-index: 1000;
+                display: none;
             }
 
             .sidebar.show {
                 transform: translateX(0);
+                display: block;
+                position: sticky;
+                background-color: white;
             }
 
             .hamburger-btn {
                 display: block;
+                content: "show Sidebar";
+
             }
+              /* Close button */
+        .close-btn {
+            display: none;
+             }
+
         }
 
         @media screen and (min-width: 1051px) {
             .sidebar.hidden {
+
                 display: none;
             }
 
@@ -377,5 +407,12 @@
 
             .hamburger-btn.hidden {
                 display: none;
+                content: "Hide Sidebar";
+
             }
+              /* Close button */
+        .close-btn {
+            display: block;
+             }
+
         }

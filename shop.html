@@ -15,9 +15,9 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/shop_page.css">
     <link rel="stylesheet" href="css/core-style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/shop_page.css">
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
 
@@ -310,12 +310,14 @@
 
 
     <div class="top-bar-shop">
-        <div style="display: flex; flex-direction: row; justify-content:initial;">
+        <div class="leftbuttonstopbar">
             
-            <button class="btn-shop">Hide Filter <span class="icon-shop">▲</span></button>
+            <button   class=" btn-shop hamburger-btn" id="hamburger-btn">Show Filter <span class="icon-shop">▼</span></button>
+            <button class="btn-shop close-btn" id="close-btn">Hide Filter <span class="icon-shop">▲</span></button>
+
             <!-- <button class="btn-shop mx-2">Sort By <span class="icon-shop">▲</span></button> -->
-            <div class="dropdown-shop">
-                <label for="sort-options-shop" class="dropdown-label-shop">Sort By:</label>
+            <div class="dropdown-shop mx-2">
+                <!-- <label for="sort-options-shop" class="dropdown-label-shop">Sort By:</label> -->
                 <select id="sort-options-shop" class="dropdown-select-shop">
                     <option value="low-high">Price: Low to High</option>
                     <option value="high-low">Price: High to Low</option>
@@ -344,7 +346,7 @@
     <div class="container_shop">
 <!-- Sidebar Menu -->
 <div class="sidebar" id="sidebar">
-    <button class="close-btn" id="close-btn">×</button>
+    <!-- <button class="close-btn" id="close-btn">×</button> -->
     <h2>Filter Options</h2>
 
     <ul class="menu_shop">
@@ -396,55 +398,49 @@
 </div>
 
         <!-- Main Content -->
+        <!-- <button class="hamburger-btn" id="hamburger-btn">☰</button> -->
         <div class="main-content" id="main-content">
-            <button class="hamburger-btn" id="hamburger-btn">☰</button>
-            <div class="slide-item productnewarrival">
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="img/product-img/p1.jpg" alt="Product 3">
-                         <div class="product-quicview">
-                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-description">
-                        <p>Varanasi - Handwoven Pure Silk Peach Banarasi Lehenga Set</p>
-                        <h4 class="product-price"><span class="pricecut">Rs. 34,990</span><span class="pricein">
-                                Rs. 30,200 (20% off)</span></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-item productnewarrival">
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="img/product-img/p1.jpg" alt="Product 3">
-                         <div class="product-quicview">
-                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-description">
-                        <p>Varanasi - Handwoven Pure Silk Peach Banarasi Lehenga Set</p>
-                        <h4 class="product-price"><span class="pricecut">Rs. 34,990</span><span class="pricein">
-                                Rs. 30,200 (20% off)</span></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-item productnewarrival">
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="img/product-img/p1.jpg" alt="Product 3">
-                         <div class="product-quicview">
-                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-description">
-                        <p>Varanasi - Handwoven Pure Silk Peach Banarasi Lehenga Set</p>
-                        <h4 class="product-price"><span class="pricecut">Rs. 34,990</span><span class="pricein">
-                                Rs. 30,200 (20% off)</span></h4>
-                    </div>
-                </div>
-            </div>
-           
+          
         </div>
+
+        <!-- <div class="main-content-shop" id="main-content-shop">
+            <div class="image-grid-shop">
+                <img src="img/product-img/handlom.jpg" alt="Image 1">
+                <img src="img/product-img/handlom.jpg" alt="Image 2">
+                <img src="img/product-img/handlom.jpg" alt="Image 3">
+                <img src="img/product-img/handlom.jpg" alt="Image 4">
+                <img src="img/product-img/handlom.jpg" alt="Image 5">
+                <img src="img/product-img/handlom.jpg" alt="Image 6">
+            </div>
+        </div> -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     </div>
 
     
@@ -459,7 +455,8 @@
             sidebar.classList.add("show");
             sidebar.classList.remove("hidden");
             mainContent.classList.remove("full-width");
-            hamburgerBtn.classList.add("hidden");
+            hamburgerBtn.style.display="none";
+            closeBtn.style.display="block";
         }
     
         // Hide sidebar and show hamburger
@@ -470,7 +467,8 @@
                 sidebar.classList.add("hidden");
                 mainContent.classList.add("full-width");
             }
-            hamburgerBtn.classList.remove("hidden");
+            hamburgerBtn.style.display="block";
+            closeBtn.style.display="none";
         }
     
         // Event listeners
@@ -490,6 +488,105 @@ document.querySelectorAll('.menu_shop-item').forEach(item => {
 });
 
     </script>
+
+
+
+
+
+       <!-- new recently viewed area started -->
+        <!-- 
+        <div class="section_heading text-center">
+            <h2>Recently Viewed</h2>
+        </div> -->
+        <h2 class="heading_section">Recently Viewed</h2>
+
+        <div class="slideshow-container mx-6">
+            <div class="slideshow">
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="handpicked-item slide-item">
+                    <div class="recent product-img">
+                        <img src="img/product-img/product-1.jpg" alt="">
+                        <div class="product-quicview">
+                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- new recently viewed area ended -->
 
 
 </div>
