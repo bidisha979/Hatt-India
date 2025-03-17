@@ -404,7 +404,8 @@
  /* color:#f5ebd7; */
  /* color: #8b0000; */
  list-style: none;
- color: black;;
+ color: black;
+ margin-inline: 5px;
 
 
 }

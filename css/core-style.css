@@ -569,11 +569,11 @@ img {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 7px;
-    padding-left: 7px;
+    /* padding-right: 15px;
+    padding-left: 15px; */
     position: relative;
     z-index: 1;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
     margin-top: 15px;
     text-transform: uppercase;
