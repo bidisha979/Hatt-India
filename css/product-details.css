@@ -42,7 +42,7 @@
    width: 100%;
     height: 750px;
     overflow-y: auto; 
-    background-color: #f5ebd7;
+    /* background-color: #f5ebd7; */
     justify-content: center;
 
 }
@@ -55,7 +55,7 @@
 /* Style each indicator */
 .carousel-indicators_product_page li {
     /* flex:1; */
-    margin: auto;
+    /* margin: auto;
     margin-bottom: 10px;
     width: 105px;
     height: 140px;
@@ -63,7 +63,18 @@
     background-position: center;
     cursor: pointer;
     border: 2px solid transparent;
+    transition: border 0.3s ease; */
+    margin: auto;
+    margin-bottom: 10px;
+    /* width: 105px; */
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid transparent;
     transition: border 0.3s ease;
+    max-height: 173px;
+    max-width: 130px;
 }
 
 .carousel-inn::-webkit-scrollbar {
@@ -374,13 +385,25 @@
 
 .breadcumb_area {
     /* padding-top: 100px; */
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
+    padding: 0px 80px;
+
 }
+@media screen and (max-width: 768px) {
+    .breadcumb_area {
+        padding: 0px 20px;
+    }
+    .carousel-indicators_product_page li {
+        max-height:140px ;
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+}
+
 
 .breadcumb_area .breadcrumb {
     margin-bottom: 0;
     background-color: transparent;
-    padding: 0;
 }
 
 .breadcumb_area .breadcrumb-item,
@@ -842,7 +865,7 @@
 .reviews-section {
     background-color: #fff;
     border: 1px solid #eee;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .reviews-header {
