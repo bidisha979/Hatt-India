@@ -1477,9 +1477,58 @@
 
 
                 </section>
+                
 
             </div>
         </div>
+
+
+
+        <!-- Full-width Banner Slider -->
+        <div class="full-width-banner">
+            <div class="banner-slides">
+                <div class="banner-slide"><img src="img/banner1.jpg" alt="Banner 1"></div>
+                <div class="banner-slide"><img src="img/banner2.jpg" alt="Banner 2"></div>
+                <div class="banner-slide"><img src="img/banner3.jpg" alt="Banner 3"></div>
+                <div class="banner-slide"><img src="img/banner4.jpg" alt="Banner 4"></div>
+            </div>
+        </div>
+
+        <style>
+            .full-width-banner {
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .banner-slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                width: 400%; /* Adjust based on the number of slides */
+            }
+
+            .banner-slide {
+                flex: 1 0 100%;
+            }
+
+            .banner-slide img {
+                width: 100%;
+                display: block;
+            }
+        </style>
+
+        <script>
+            const slides = document.querySelector('.banner-slides');
+            const totalSlides = document.querySelectorAll('.banner-slide').length;
+            let currentIndex = 0;
+
+            function slideBanner() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            setInterval(slideBanner, 1000); // Slide every 1 second
+        </script>
 
 
         <!-- for mobile artisan -->
