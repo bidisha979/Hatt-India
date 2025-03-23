@@ -143,10 +143,14 @@
     // :: 8.0 Side Menu Active Code
     $('#sideMenuBtn').on('click', function () {
         $('#wrapper').toggleClass('karl-side-menu-open');
+        document.getElementById("hatt-side-menu").style.visibility = "visible";
     })
     
     $('#sideMenuClose').on('click', function () {
         $('#wrapper').removeClass('karl-side-menu-open');
+        // document.getElementById("catagories-side-menu").style.display = "block";
+        document.getElementById("hatt-side-menu").style.visibility = "hidden";
+
     })
     // :: 9.0 Magnific-popup Video Active Code
     if ($.fn.magnificPopup) {

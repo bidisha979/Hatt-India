@@ -567,7 +567,9 @@ margin-right: 30px;
 }
 .artisanlaptopitem{
     /* display: none; */
+    /* margin-inline: 60px; */
 }
+
 .artisanlaptopcontainer{
     display: flex;
     
@@ -594,9 +596,13 @@ height: 300px;
 width: 100%;
 margin-bottom: 20px;
 }
+.art-text h1{
+    font-weight: bolder;
+}
 .art-text h1, .art-text p, .art-text a, .art-text sub{
     color: #8b0000;
     font-style: 'Playfair Display';
+    /* font-weight: 500; */
 }
 .art-text a{
     /* float: left; */
@@ -615,7 +621,7 @@ margin-bottom: 20px;
     padding: 30px 50px;
     /* padding-top: 10px; */
     width: auto;
-    margin:20px;
+    /* margin:20px; */
     height: 665px;
     /* width:35%; */
     /* padding:20 px ; */
