@@ -101,7 +101,7 @@ h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 0
 }
 
 abbr[data-original-title],
@@ -607,7 +607,7 @@ pre code {
     margin-left: auto
 }
 
-@media (min-width:576px) {
+/* @media (min-width:576px) {
     .container {
         max-width: 540px
     }
@@ -623,11 +623,11 @@ pre code {
     .container {
         max-width: 960px
     }
-}
+} */
 
 @media (min-width:1200px) {
     .container {
-        max-width: 1140px
+        max-width: 1500px
     }
 }
 
@@ -645,8 +645,8 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px
+    /* margin-right: -15px;
+    margin-left: -15px */
 }
 
 .no-gutters {
@@ -4450,7 +4450,7 @@ tbody.collapse.show {
     }
 }
 
-@media (min-width:1205px) {
+@media (min-width:1375px) {
     .navbar-expand-lg {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;

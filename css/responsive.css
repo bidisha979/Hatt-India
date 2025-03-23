@@ -6,7 +6,7 @@
     
    
 }
-@media only screen and (min-width: 768px) and (max-width: 1205px) {
+@media only screen and (min-width: 768px) and (max-width: 1375px) {
     .navbar-toggler {
         position: absolute;
         /* display: none; */
@@ -164,7 +164,7 @@ margin: 7px;
     }
     .footer_social_area > a {
         font-size: 18px;
-        padding: 0 15px;
+        /* padding: 0 15px; */
     }
     .subscribtion_form .submit {
         padding: 0 20px;
