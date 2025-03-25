@@ -4450,7 +4450,7 @@ tbody.collapse.show {
     }
 }
 
-@media (min-width:1375px) {
+@media (min-width:1295px) {
     .navbar-expand-lg {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;

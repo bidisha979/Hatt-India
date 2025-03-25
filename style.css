@@ -181,7 +181,7 @@
 
 
 /* Navbar adjustments for large screens */
-@media (min-width: 1375px) {
+@media (min-width: 1295px) {
     .navbar {
         flex-wrap: nowrap;
     }
@@ -444,11 +444,11 @@
     /* color: #8b0000; */
     list-style: none;
     color: black;
-    margin-inline: 5px;
+    margin-inline: 1px;
    /* padding: 10px 10px; */
    
    }
-   @media screen and (max-width: 1375px) {
+   @media screen and (max-width: 1295px) {
        .catagories{
          
        margin-inline: 0px;
@@ -475,6 +475,16 @@
     background-color:#8b0000;   
     color:#f5ebd7 ;
     border-radius: 5px;
+}
+@media (max-width: 1295px) {
+    .catagories :hover{
+        background-color:#8b0000;   
+        color:#f5ebd7 ;
+        border-radius: 0px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        margin-top: 0px;
+    }
 }
 .catagories a{
     /* color:#8b0000;    */
