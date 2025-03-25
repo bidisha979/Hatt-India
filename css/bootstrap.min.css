@@ -2739,7 +2739,7 @@ select.form-control-lg:not([size]):not([multiple]) {
     cursor: pointer;
     border: 2px solid #8b0000;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     color: black;
     font-weight: lighter;
     margin: 10px;

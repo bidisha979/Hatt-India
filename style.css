@@ -228,6 +228,12 @@
     margin: 20px;
 }
 
+.newmenu{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .box{
     display: flex;
     display: flex;
