@@ -181,7 +181,7 @@
 
 
 /* Navbar adjustments for large screens */
-@media (min-width: 1295px) {
+@media (min-width: 1260px) {
     .navbar {
         flex-wrap: nowrap;
     }
@@ -452,7 +452,7 @@
    /* padding: 10px 10px; */
    
    }
-   @media screen and (max-width: 1295px) {
+   @media screen and (max-width: 1260px) {
        .catagories{
          
        margin-inline: 0px;
@@ -480,7 +480,7 @@
     color:#f5ebd7 ;
     border-radius: 5px;
 }
-@media (max-width: 1295px) {
+@media (max-width: 1260px) {
     .catagories :hover{
         background-color:#8b0000;   
         color:#f5ebd7 ;
@@ -878,7 +878,7 @@ margin-bottom: 20px;
     color: #f5ebd7;
     font-size: 20px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 0px 0;
 }
 
 .add-to-cart-btn {
