@@ -18,7 +18,7 @@
    
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1260px) {
+@media only screen and (min-width: 768px) and (max-width: 1255px) {
     .navbar-toggler {
         position: absolute;
         /* display: none; */
