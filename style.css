@@ -253,6 +253,7 @@
     }
     .btn:not([disabled]):not(.disabled) {
         margin: 5px;
+        border: 1px solid #8b0000;
         /* margin-bottom: 20px; */
     }
 }
