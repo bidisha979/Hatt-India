@@ -35,13 +35,33 @@
         margin-bottom: 5px;
         margin-top: 20px;
     }
+
+    .new{
+        font-weight: bold;
+        font-size: 25px;
+        margin: 20px;
+    }
     /* make it for mobile */
     @media screen and (max-width:1700px) {
     .heading_section{
         font-size: 20px;
         margin-top: 20px;
         margin-bottom: 5px;
-    }   
+    } 
+    .new{
+        font-size: 15px;
+    }  
+    .btn:not([disabled]):not(.disabled) {
+        /* cursor: pointer;
+        border: 2px solid #8b0000;
+        padding: 10px;
+        border-radius: 8px;
+        color: black;
+        font-weight: lighter;
+        margin: 10px; */
+        width: 100px;
+        font-size: 10px;
+    }
     .section_heading h2 {
         font-size: 20px;
     }
@@ -217,22 +237,31 @@
     
 }
 
-.head{
-    font-weight: bolder;
-    font-size: 30px;
-}
-
-.new{
-    font-weight: bold;
-    font-size: 25px;
-    margin: 20px;
-}
-
 .newmenu{
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 635px) {
+    .newmenu{
+       flex-direction: column;
+       margin-bottom: 15px;
+    }
+    .new{
+        margin: 0px;
+    }
+    .btn:not([disabled]):not(.disabled) {
+        margin: 5px;
+        /* margin-bottom: 20px; */
+    }
+}
+
+.head{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
 
 .box{
     display: flex;
