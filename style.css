@@ -291,7 +291,11 @@
     font-weight: bold;
 }
 
-
+@media (max-width: 1700px) {
+    .props div{
+        font-size: 15px;
+    }
+}
 /* Stack items in a single column for very small screens */
 @media (max-width: 480px) {
     .props {
@@ -965,6 +969,14 @@ margin-bottom: 20px;
     color: black;
     font-weight: lighter;
     font-size: 15px;
+}
+
+@media (max-width: 1700px) {
+    #props-text{
+        color: black;
+        font-weight: lighter;
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 1000px) {

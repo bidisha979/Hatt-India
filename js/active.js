@@ -149,7 +149,12 @@
     $('#sideMenuClose').on('click', function () {
         $('#wrapper').removeClass('karl-side-menu-open');
         // document.getElementById("catagories-side-menu").style.display = "block";
+        // alert("hello");
+        setTimeout(function(){
+
         document.getElementById("hatt-side-menu").style.visibility = "hidden";
+        
+        }, 500);
 
     })
     // :: 9.0 Magnific-popup Video Active Code
